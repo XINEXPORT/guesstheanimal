@@ -1,4 +1,4 @@
-<!---Guess the Animal--->
+# Guess the Animal Component Hierarchy
 - MainGame
    - Quiz
      - QuizForm
