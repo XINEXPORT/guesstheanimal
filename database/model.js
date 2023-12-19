@@ -1,3 +1,5 @@
+//REFERENCE model.js from WB-ASSESS-5
+
 import { DataTypes, INTEGER, Model } from 'sequelize';
 import connectToDB from './db.js';
 import util from 'util';

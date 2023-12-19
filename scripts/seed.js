@@ -1,10 +1,11 @@
-//This is where default data needs to reside
-//Reference Sqlize seed.js exercise
+//THIS IS WHERE THE ANIMAL DATA RESIDES
+//REFERENCE seed.js from WB-ASSESS-5
 
 import {Op} from 'sequelize'
 import {db, Animal} from '../database/model.js'
 
-//DROP THE TABLE MEANS FORCE TRUE
+//FORCE TRUE NEEDS TO BE AT THE TOP FILE
+//FORCE TRUE MEANS DROP ALL TABLES AND RESEED
 await db.sync ({force:true})
 
 //ANIMAL SEED
@@ -32,8 +33,58 @@ const duck = await Animal.create({
     animalDetails:'Itsa Duck'
 })
 
+const pig = await Animal.create({
+    animalName:'Pig',
+    animalImg:'../public/img/pig.png',
+    animalSound:'https://actions.google.com/sounds/v1/animals/animal_squealing.ogg',
+    animalQuestion:'What sounds does a Pig make?',
+    animalDetails:'Itsa pig'
+})
+
+const dog = await Animal.create({
+    animalName:'Dog',
+    animalImg:'../public/img/dog.png',
+    animalSound:'https://actions.google.com/sounds/v1/animals/dog_barking.ogg',
+    animalQuestion:'What sounds does a Dog make?',
+    animalDetails:'Itsa dog'
+})
+
+const fly = await Animal.create({
+    animalName:'Fly',
+    animalImg:'../public/img/fly.png',
+    animalSound:'https://actions.google.com/sounds/v1/animals/flies_buzzing_and_circling.ogg',
+    animalQuestion:'What sounds does a Fly make?',
+    animalDetails:"Itsa fly"
+})
+
+const mouse = await Animal.create({
+    animalName:'Mouse',
+    animalImg:'../public/img/mouse.png',
+    animalSound: 'https://actions.google.com/sounds/v1/animals/mouse_squeaking.ogg',
+    animalQuestion:'What sounds does a Mouse make?',
+    animalDetails:'Itsa Mouse'
+})
+
+const owl = await Animal.create({
+    animalName:'Owl',
+    animalImg:'../public/img/owl.png',
+    animalSound:'https://actions.google.com/sounds/v1/animals/owl_hooting.ogg',
+    animalQuestion:'What sounds does a Owl make?',
+    animalDetails:'Itsa owl'
+
+})
+
+const woodpecker = await Animal.create({
+    animalName:'Woodpecker',
+    animalImg:'../public/img/woodpecker.png',
+    animalSound:'https://actions.google.com/sounds/v1/animals/woodpecker_pecking_fast.ogg',
+    animalQuestion:'What sounds does a Woodpecker make?',
+    animalDetails:'Itsa woodpecker'
+})
+
 
 console.log(rooster)
 console.log(cat)
+console.log(pig)
 
 await db.close()

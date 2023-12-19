@@ -3,6 +3,8 @@
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light grey;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgba(0, 255, 255, 0.87);
   background-color: #ecffd9;
+  background-image: url("../public/img/riko-vladimir-ghib3.jpg");
+  background-repeat: no-repeat;
 }
