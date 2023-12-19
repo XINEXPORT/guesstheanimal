@@ -12,4 +12,8 @@ ViteExpress.config({ printViteDevServerHost: true });
 
 // Routes go here
 
+
+
+
+
 ViteExpress.listen(app, port, () => console.log(`Server is listening on http://localhost:${port}`));
