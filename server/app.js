@@ -20,5 +20,4 @@ ViteExpress.config({ printViteDevServerHost: true });
 app.get('/api/animal', getAnimals)
 
 
-
 ViteExpress.listen(app, port, () => console.log(`Server is listening on http://localhost:${port}`));

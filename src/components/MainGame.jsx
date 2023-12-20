@@ -1,29 +1,27 @@
-import '../App.css';
+import '../index.css';
 import Quiz from './Quiz.jsx';
 import axios from 'axios';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
+import lodash from 'lodash';
+import { useLoaderData } from 'react-router-dom';
 
-const MainGame = ({initialAnimalList}) =>{
-    const [animalList, setAnimalList] = useState(initialAnimalList);
+const MainGame = ()=>{
+    const {animals} =useLoaderData()
+    let choices = lodash.sampleSize(animals, 3)
+    const [quiz,setQuiz]=useState(choices);
+    const [page,setPage]=useState(<Quiz q={quiz}/>)
+    const [answered,setAnswered]=useState(false);
 
-
-const animalCard = animalList.map((animal) =>{
-    const {animalId, animalImg, animalName, animalSound, animalQuestion} = animal
-    return(
-        <AnimalCard
-            key={animalId}
-            initialAnimalList={{animalId, animalImg, animalName, animalSound, animalQuestion}}
-            />
-    )
-})
-
-console.log(animalCard);
+useEffect(()=>{
+    if(answered){
+    }
+},[answered])
 
 return(
     <main>
         <h1 className = 'guesstheanimalheader'>Guess the Animal</h1>
         <div className = 'animalcard'>
-            {animalCard}
+        {page}
         </div>
     </main>
 )}

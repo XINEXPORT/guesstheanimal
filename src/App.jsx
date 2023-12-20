@@ -1,9 +1,17 @@
 import "./App.css"
 import MainGame from "./components/MainGame.jsx"
+import { Outlet } from "react-router-dom"
 
 const App=() =>{
-    return <MainGame initialAnimalList = {initialAnimalList}/>
+    return  (
+        <>
+        <Outlet   />
+        </>
+    )
 }
+
+//Need to make a router
+
 
 
 export default App;
