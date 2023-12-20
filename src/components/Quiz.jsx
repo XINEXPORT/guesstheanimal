@@ -1,19 +1,28 @@
 import '../index.css';
 import axios from 'axios';
 import {useState} from 'react'
+import SoundButtonLink from './SoundButtons';
+import lodash from 'lodash';
 
-const Quiz = ({q})=>{
+const Quiz = ({q, setAnswered, setUserResponse})=>{
     const [animalName, setAnimalName] = useState()
     const [animalImg, setAnimalImg] = useState()
     const [animalQuestion, setAnimalQuestion] = useState()
 
-    console.log(q[0])
+    console.log(q)
 
+    let quizArr = lodash.shuffle(q)
+    let btns = quizArr.map(
+        (animalObj)=>{
+            return <SoundButtonLink key={animalObj.animalId} sound={animalObj.animalSound} setAnswered={setAnswered} setUserResponse={setUserResponse} animalId={animalObj.animalId}/>
+        }
+    )
 
 return(
-    <div className = "quiz">
-
-    </div>
+    <main className = "quiz">
+    <img src= {q[0].animalImg}/>
+    <div id="btns">{btns}</div>
+    </main>
 )
 }
 

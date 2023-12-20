@@ -1,4 +1,5 @@
 # Guess the Animal Component Hierarchy
+- Home
 - MainGame
    - Quiz
      - QuizForm
