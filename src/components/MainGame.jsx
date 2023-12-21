@@ -18,7 +18,7 @@ const MainGame = ()=>{
     //ISGAME ANSWERED STATE
     const [answered,setAnswered]=useState(false);
     //USER RESPONSE STATE
-    //null is an empty javascript variable
+         //null is an empty javascript variable
     const[userResponse, setUserResponse]=useState(null);
     //DISPLAY State
     const [display,setDisplay]=useState(<Quiz q={quiz} setAnswered={setAnswered} setUserResponse={setUserResponse}/>)
@@ -40,7 +40,6 @@ return(
         <h1 className = 'guesstheanimalheader'>Guess the Animal</h1>
         <div className = 'animalcard'>
         {display}
-        {/* /*gamestate is page* */}
         </div>
     </main>
 )}

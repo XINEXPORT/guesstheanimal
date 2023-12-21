@@ -2,7 +2,7 @@ import MainGame from "./MainGame"
 import '../index.css';
 
 const CorrectAnswer =()=>{
-return 
+return
 <main>
     <h1>
         Correct!
