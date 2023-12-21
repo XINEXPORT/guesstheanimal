@@ -1,10 +1,13 @@
 import "./App.css"
 import MainGame from "./components/MainGame.jsx"
-import { Outlet } from "react-router-dom"
+import { Outlet, Link} from "react-router-dom"
 
 const App=() =>{
     return  (
         <>
+        <header>
+        <Link to="/game">Game</Link>
+        </header>
         <Outlet   />
         </>
     )
