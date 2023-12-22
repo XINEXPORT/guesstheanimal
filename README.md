@@ -1,5 +1,5 @@
 # Guess the Animal
-a children's game that will be expanded into an interactive application
+a children's game that will be expanded into an interactive game application
 
 Install Dependencies
 - npm i <br>
