@@ -30,14 +30,13 @@ useEffect(()=>{
         if(answer === userResponse){
             setDisplay(<CorrectAnswer/>)
         } else{
-            setDisplay(<IncorrectAnswer/>)
+            setDisplay(<IncorrectAnswer setUserResponse={setUserResponse} setAnswered={setAnswered} quiz={quiz} setDisplay={setDisplay}/>)
         }
     }
 },[answered])
 
 return(
     <main>
-        <h1 className = 'guesstheanimalheader'>Guess the Animal</h1>
         <div className = 'animalcard'>
         {display}
         </div>

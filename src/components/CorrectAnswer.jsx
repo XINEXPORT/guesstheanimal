@@ -1,5 +1,8 @@
-import MainGame from "./MainGame"
 import '../index.css';
+import MainGame from "./MainGame"
+import lodash from 'lodash';
+import { useLoaderData } from 'react-router-dom';
+import {useState} from 'react';
 
 const CorrectAnswer =()=>{
 return

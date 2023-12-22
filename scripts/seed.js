@@ -13,7 +13,7 @@ const rooster = await Animal.create({
     animalName: 'Rooster',
     animalImg: '../public/img/rooster.png',
     animalSound: 'https://actions.google.com/sounds/v1/ambiences/barnyard_with_animals.ogg',
-    animalQuestion: 'What sounds does a Rooster make?',
+    animalQuestion: 'What sound does a Rooster make?',
     animalDetails: 'Itsa rooster'
 })
 
@@ -29,7 +29,7 @@ const duck = await Animal.create({
     animalName:'Duck',
     animalImg:'../public/img/duck.png',
     animalSound:'https://actions.google.com/sounds/v1/animals/geese_outside.ogg',
-    animalQuestion:'What sounds does a Duck make?',
+    animalQuestion:'What sound does a Duck make?',
     animalDetails:'Itsa Duck'
 })
 
@@ -37,7 +37,7 @@ const pig = await Animal.create({
     animalName:'Pig',
     animalImg:'../public/img/pig.png',
     animalSound:'https://actions.google.com/sounds/v1/animals/animal_squealing.ogg',
-    animalQuestion:'What sounds does a Pig make?',
+    animalQuestion:'What sound does a Pig make?',
     animalDetails:'Itsa pig'
 })
 
@@ -45,7 +45,7 @@ const dog = await Animal.create({
     animalName:'Dog',
     animalImg:'../public/img/dog.png',
     animalSound:'https://actions.google.com/sounds/v1/animals/dog_barking.ogg',
-    animalQuestion:'What sounds does a Dog make?',
+    animalQuestion:'What sound does a Dog make?',
     animalDetails:'Itsa dog'
 })
 
@@ -53,7 +53,7 @@ const fly = await Animal.create({
     animalName:'Fly',
     animalImg:'../public/img/fly.png',
     animalSound:'https://actions.google.com/sounds/v1/animals/flies_buzzing_and_circling.ogg',
-    animalQuestion:'What sounds does a Fly make?',
+    animalQuestion:'What sound does a Fly make?',
     animalDetails:"Itsa fly"
 })
 
@@ -61,7 +61,7 @@ const mouse = await Animal.create({
     animalName:'Mouse',
     animalImg:'../public/img/mouse.png',
     animalSound: 'https://actions.google.com/sounds/v1/animals/mouse_squeaking.ogg',
-    animalQuestion:'What sounds does a Mouse make?',
+    animalQuestion:'What sound does a Mouse make?',
     animalDetails:'Itsa Mouse'
 })
 
@@ -69,7 +69,7 @@ const owl = await Animal.create({
     animalName:'Owl',
     animalImg:'../public/img/owl.png',
     animalSound:'https://actions.google.com/sounds/v1/animals/owl_hooting.ogg',
-    animalQuestion:'What sounds does a Owl make?',
+    animalQuestion:'What sound does a Owl make?',
     animalDetails:'Itsa owl'
 
 })
@@ -78,7 +78,7 @@ const woodpecker = await Animal.create({
     animalName:'Woodpecker',
     animalImg:'../public/img/woodpecker.png',
     animalSound:'https://actions.google.com/sounds/v1/animals/woodpecker_pecking_fast.ogg',
-    animalQuestion:'What sounds does a Woodpecker make?',
+    animalQuestion:'What sound does a Woodpecker make?',
     animalDetails:'Itsa woodpecker'
 })
 

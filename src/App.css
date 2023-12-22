@@ -4,3 +4,11 @@
   padding: 2rem;
   text-align: center;
 }
+#navlinks{
+  padding: 1rem;
+  font-size: x-large;
+  text-align: left;
+}
+#homelink{
+  margin: 10%;
+}

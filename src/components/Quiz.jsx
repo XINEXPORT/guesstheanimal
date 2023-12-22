@@ -14,12 +14,13 @@ const Quiz = ({q, setAnswered, setUserResponse})=>{
     let quizArr = lodash.shuffle(q)
     let btns = quizArr.map(
         (animalObj)=>{
-            return <SoundButtonLink key={animalObj.animalId} sound={animalObj.animalSound} setAnswered={setAnswered} setUserResponse={setUserResponse} animalId={animalObj.animalId}/>
+            return <SoundButtonLink key={animalObj.animalId} sound={animalObj.animalSound} qstn={animalObj.animalQuestion}setAnswered={setAnswered} setUserResponse={setUserResponse} animalId={animalObj.animalId}/>
         }
     )
 
 return(
     <main className = "quiz">
+    <p id="animal-qstn">{q[0].animalQuestion}</p>
     <img src= {q[0].animalImg}/>
     <div id="btns">{btns}</div>
     </main>

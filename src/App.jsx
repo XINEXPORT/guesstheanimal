@@ -5,16 +5,14 @@ import { Outlet, Link} from "react-router-dom"
 const App=() =>{
     return  (
         <>
-        <header>
-        <Link to="/game">Game</Link>
+        <header id = "navlinks">
+        <Link to ="/" id = "homelink">Home</Link>
+        <Link to ="/game">Game</Link>
         </header>
         <Outlet   />
         </>
     )
 }
-
-//Need to make a router
-
 
 
 export default App;
