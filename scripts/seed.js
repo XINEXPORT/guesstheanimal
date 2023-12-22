@@ -74,13 +74,6 @@ const owl = await Animal.create({
 
 })
 
-const woodpecker = await Animal.create({
-    animalName:'Woodpecker',
-    animalImg:'../public/img/woodpecker.png',
-    animalSound:'https://actions.google.com/sounds/v1/animals/woodpecker_pecking_fast.ogg',
-    animalQuestion:'What sound does a Woodpecker make?',
-    animalDetails:'Itsa woodpecker'
-})
 
 
 console.log(rooster)

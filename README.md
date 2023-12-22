@@ -12,6 +12,6 @@ Run the seed file <br>
 Execute the following command:
 - npm run seed <br>
 
-Then Run Environment <br>
+Then Run Dev Environment <br>
 Execute the following command:
 - npm run dev

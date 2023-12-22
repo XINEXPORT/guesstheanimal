@@ -1,6 +1,5 @@
 import '../index.css';
 import Quiz from './Quiz.jsx';
-import axios from 'axios';
 import {useState, useEffect} from 'react';
 import lodash from 'lodash';
 import { useLoaderData } from 'react-router-dom';
@@ -28,10 +27,12 @@ useEffect(()=>{
     if(answered){
         let answer=quiz[0].animalId
         if(answer === userResponse){
-            setDisplay(<CorrectAnswer/>)
+            setDisplay(<CorrectAnswer animals={animals} quiz={quiz} setQuiz= {setQuiz} setUserResponse={setUserResponse} setAnswered={setAnswered} setDisplay={setDisplay}/>)
         } else{
             setDisplay(<IncorrectAnswer setUserResponse={setUserResponse} setAnswered={setAnswered} quiz={quiz} setDisplay={setDisplay}/>)
         }
+    } else{
+        setDisplay(<Quiz q={quiz} setAnswered={setAnswered} setUserResponse={setUserResponse}/>)
     }
 },[answered])
 
