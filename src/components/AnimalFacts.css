@@ -15,6 +15,8 @@
     cursor: pointer;
     min-width: 320px;
     min-height: 320px;
+    color: black;
+    font-size: x-large
 }
 #cat{
     background-color: rgb(251, 218, 234);
@@ -27,6 +29,8 @@
     cursor: pointer;
     min-width: 320px;
     min-height: 320px;
+    color: black;
+    font-size: x-large
 }
 #duck{
     background-color: rgb(255, 255, 204);
@@ -39,6 +43,8 @@
     cursor: pointer;
     min-width: 320px;
     min-height: 320px;
+    color: black;
+    font-size: x-large
 }
 #pig{
     background-color: rgb(255, 204, 153);
@@ -51,6 +57,8 @@
     cursor: pointer;
     min-width: 320px;
     min-height: 320px;
+    color: black;
+    font-size: x-large
 }
 #dog{
     background-color: rgb(204, 255, 255);
@@ -63,6 +71,8 @@
     cursor: pointer;
     min-width: 320px;
     min-height: 320px;
+    color: black;
+    font-size: x-large
 }
 #fly{
     background-color: rgb(229, 204, 255);
@@ -75,6 +85,8 @@
     cursor: pointer;
     min-width: 320px;
     min-height: 320px;
+    color: black;
+    font-size: x-large
 }
 #mouse{
     background-color: rgb(248, 180, 185);
@@ -87,6 +99,8 @@
     cursor: pointer;
     min-width: 320px;
     min-height: 320px;
+    color: black;
+    font-size: x-large
 }
 #owl{
     background-color: rgb(143, 255, 214);
@@ -99,4 +113,6 @@
     cursor: pointer;
     min-width: 320px;
     min-height: 320px;
+    color: black;
+    font-size: x-large
 }

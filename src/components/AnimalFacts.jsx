@@ -12,11 +12,13 @@ const [animalImg, setAnimalImg] = useState()
 const [animalDetails, setAnimalDetails] = useState()
 
 
-let allAnimals = animals.map(
-    (animalObj)=>{
-         return <img key={animalObj.id} src={animalObj.animalImg} alt={`Animal ${animalObj.id}`} details = {animalObj.animalDetails}/>
-    }
-)
+let allAnimals = animals.map((animalObj) => (
+    <div key={animalObj.id}>
+      <h1>{animalObj.animalName}</h1>
+      <img src={animalObj.animalImg} alt={`Animal ${animalObj.id}`} />
+      <p>{animalObj.animalDetails}</p>
+    </div>
+  ));
 
 console.log(allAnimals)
 
@@ -43,9 +45,9 @@ return(
     <div id = "mouse">
     {allAnimals[6]}
     </div>
-    <div id = "owl">
+    <div id = "owl"> 
     {allAnimals[7]}
-    </div>
+    </div> 
     </main>
 )
 }

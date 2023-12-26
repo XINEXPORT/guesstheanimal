@@ -14,7 +14,7 @@ const rooster = await Animal.create({
     animalImg: '../public/img/rooster.png',
     animalSound: 'https://actions.google.com/sounds/v1/ambiences/barnyard_with_animals.ogg',
     animalQuestion: 'What sound does a Rooster make?',
-    animalDetails: 'Itsa rooster'
+    animalDetails: 'Roosters crow all the time! They’ll crow to greet the day, to lead their flocks to forage, to cue a boundary, and to alert about predators.'
 })
 
 const cat = await Animal.create({
@@ -22,7 +22,7 @@ const cat = await Animal.create({
     animalImg: '../public/img/cat.png',
     animalSound: 'https://actions.google.com/sounds/v1/animals/cat_purr.ogg',
     animalQuestion: 'What sound does a Cat make?',
-    animalDetails: "Itsa Cat"
+    animalDetails: "Cats are believed to be the only mammals who don’t taste sweetness."
 })
 
 const duck = await Animal.create({
@@ -30,7 +30,7 @@ const duck = await Animal.create({
     animalImg:'../public/img/duck.png',
     animalSound:'https://actions.google.com/sounds/v1/animals/geese_outside.ogg',
     animalQuestion:'What sound does a Duck make?',
-    animalDetails:'Itsa Duck'
+    animalDetails:'Mallard ducks swim with their tail held above the water. When they are alarmed, they can spring directly out of the water and into the air.'
 })
 
 const pig = await Animal.create({
@@ -38,7 +38,7 @@ const pig = await Animal.create({
     animalImg:'../public/img/pig.png',
     animalSound:'https://actions.google.com/sounds/v1/animals/animal_squealing.ogg',
     animalQuestion:'What sound does a Pig make?',
-    animalDetails:'Itsa pig'
+    animalDetails:'Pigs have the intelligence of a human toddler and are ranked as the fifth most intelligent animal in the world!'
 })
 
 const dog = await Animal.create({
@@ -46,7 +46,7 @@ const dog = await Animal.create({
     animalImg:'../public/img/dog.png',
     animalSound:'https://actions.google.com/sounds/v1/animals/dog_barking.ogg',
     animalQuestion:'What sound does a Dog make?',
-    animalDetails:'Itsa dog'
+    animalDetails:'Dogs are color-blind. They have trouble seeing shades of red and green but can see blues and yellows.'
 })
 
 const fly = await Animal.create({
@@ -54,7 +54,7 @@ const fly = await Animal.create({
     animalImg:'../public/img/fly.png',
     animalSound:'https://actions.google.com/sounds/v1/animals/flies_buzzing_and_circling.ogg',
     animalQuestion:'What sound does a Fly make?',
-    animalDetails:"Itsa fly"
+    animalDetails:"Flies have sensors on their tarsi, or feet, that help them determine whether that sandwich they just landed on will be a tasty snack."
 })
 
 const mouse = await Animal.create({
@@ -62,7 +62,7 @@ const mouse = await Animal.create({
     animalImg:'../public/img/mouse.png',
     animalSound: 'https://actions.google.com/sounds/v1/animals/mouse_squeaking.ogg',
     animalQuestion:'What sound does a Mouse make?',
-    animalDetails:'Itsa Mouse'
+    animalDetails:'Mice are usually nocturnal animals. They have poor eyesight but make up for this with their very good hearing and smell.'
 })
 
 const owl = await Animal.create({
@@ -70,11 +70,9 @@ const owl = await Animal.create({
     animalImg:'../public/img/owl.png',
     animalSound:'https://actions.google.com/sounds/v1/animals/owl_hooting.ogg',
     animalQuestion:'What sound does a Owl make?',
-    animalDetails:'Itsa owl'
+    animalDetails:'Owls are farsighted, meaning they can’t see things close to their eyes clearly.'
 
 })
-
-
 
 console.log(rooster)
 console.log(cat)
