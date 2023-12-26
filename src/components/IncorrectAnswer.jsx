@@ -8,8 +8,8 @@ const IncorrectAnswer =({setAnswered, setUserResponse, quiz, setDisplay})=>{
 
     return(
         <main id = "incorrect-answer">
-            <div id="try-again">
-                <button
+            <div>
+                <button id="try-again"
                 onClick={()=>{
                     setUserResponse(null)
                     setDisplay(<Quiz q={quiz} setAnswered={setAnswered} setUserResponse={setUserResponse}/>)

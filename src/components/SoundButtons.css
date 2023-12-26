@@ -1,0 +1,13 @@
+#select{
+    font-size: xx-large;
+    align-content: center;
+    background-color: white;
+    border-radius: .5em;
+    margin: auto;
+    margin-top: 20px;
+    padding: 6px;
+    display: block;
+}
+audio::-webkit-media-controls-panel {
+    background-color: #FFFD98;
+  }

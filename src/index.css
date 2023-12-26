@@ -45,7 +45,20 @@ h1{
   margin-bottom: 5%;
 }
 #try-again{
+  margin: 6em;
+  padding: .5em;
   font-size: xx-large;
+  background-color: rgb(255, 255, 255);
+  border-radius: .5rem;
+  justify-content: center;
+}
+#play-again{
+  margin: 6em;
+  padding: .5em;
+  font-size: xx-large;
+  background-color: rgb(255, 255, 255);
+  border-radius: .5rem;
+  justify-content: center;
 }
 .btn{
   font-size: large;

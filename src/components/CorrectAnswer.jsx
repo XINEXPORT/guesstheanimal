@@ -16,8 +16,7 @@ return(
     <h1>
         Correct!
     </h1>
-    {/* <p id="animal-details">{q[0].animalDetails}</p> */}
-        <button onClick={()=>{
+        <button id="play-again" onClick={()=>{
             setQuiz(newChoices)
             setUserResponse(null)
             setAnswered(false)

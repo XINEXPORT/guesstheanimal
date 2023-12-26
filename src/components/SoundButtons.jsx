@@ -1,4 +1,4 @@
-import '../index.css';
+import './SoundButtons.css';
 import {Link} from 'react-router-dom'
 
 
@@ -8,7 +8,7 @@ return(
    <div className='sound-btn'>
     <audio src={sound} controls></audio>
 
-    <button onClick={() =>{
+    <button id="select" onClick={() =>{
         setUserResponse(animalId)
         setAnswered(true)
     }}>
