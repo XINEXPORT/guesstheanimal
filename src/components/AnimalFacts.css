@@ -1,0 +1,102 @@
+#animal-cards{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr;
+    grid-gap: 20px;
+    justify-content: center;
+}
+#rooster{
+    background-color: rgb(204, 255, 153);
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 1rem;
+    margin: 2em;
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    min-width: 320px;
+    min-height: 320px;
+}
+#cat{
+    background-color: rgb(251, 218, 234);
+    border: 3px solid black;
+    border-radius: 1rem;
+    margin: 2em;
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    min-width: 320px;
+    min-height: 320px;
+}
+#duck{
+    background-color: rgb(255, 255, 204);
+    border: 3px solid black;
+    border-radius: 1rem;
+    margin: 2em;
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    min-width: 320px;
+    min-height: 320px;
+}
+#pig{
+    background-color: rgb(255, 204, 153);
+    border: 3px solid black;
+    border-radius: 1rem;
+    margin: 2em;
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    min-width: 320px;
+    min-height: 320px;
+}
+#dog{
+    background-color: rgb(204, 255, 255);
+    border: 3px solid black;
+    border-radius: 1rem;
+    margin: 2em;
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    min-width: 320px;
+    min-height: 320px;
+}
+#fly{
+    background-color: rgb(229, 204, 255);
+    border: 3px solid black;
+    border-radius: 1rem;
+    margin: 2em;
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    min-width: 320px;
+    min-height: 320px;
+}
+#mouse{
+    background-color: rgb(248, 180, 185);
+    border: 3px solid black;
+    border-radius: 1rem;
+    margin: 2em;
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    min-width: 320px;
+    min-height: 320px;
+}
+#owl{
+    background-color: rgb(143, 255, 214);
+    border: 3px solid black;
+    border-radius: 1rem;
+    margin: 2em;
+    padding: 1em;
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+    min-width: 320px;
+    min-height: 320px;
+}

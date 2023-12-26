@@ -8,6 +8,8 @@ const getAnimals = async (req,res) =>{
     res.json(animals)
 }
 
-
+//FETCH ALL ANIMAL API DATA
+// const getAnimalsAPI = async (req, res)=>{
+// }
 
 export {getAnimals}

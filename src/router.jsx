@@ -4,6 +4,7 @@ import Home from './components/Home.jsx'
 import MainGame from './components/MainGame.jsx'
 import Quiz from './components/Quiz.jsx'
 import axios from 'axios';
+import AnimalFacts from './components/AnimalFacts.jsx';
 
 
 //PAGE ROUTES
@@ -28,7 +29,17 @@ const router=createBrowserRouter(
             //this is what use loaderdata returns for MainGame
         }}
     />
-    </Route>
+<Route
+//ANIMAL FACTS PAGE
+        path = "/animalflashcards"
+        element={<AnimalFacts/>}
+        loader = {async()=>{
+            let res = await axios.get ('/api/animal')
+            return {animals:res.data}
+        }}
+
+/>
+</Route>
     )
     )
 

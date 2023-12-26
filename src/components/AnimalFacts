@@ -1,9 +1,0 @@
-import '../index.css';
-import MainGame from "./MainGame"
-import {useState} from 'react';
-
-const animalFacts = ()=>{
-
-}
-
-export default animalFacts

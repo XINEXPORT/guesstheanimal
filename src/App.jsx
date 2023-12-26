@@ -7,7 +7,8 @@ const App=() =>{
         <>
         <header id = "navlinks">
         <Link to ="/" id = "homelink">Home</Link>
-        <Link to ="/game">Game</Link>
+        <Link to = "/game" id = "gamelink">Game</Link>
+        <Link to ="/animalflashcards" id = "animal-flashlink">Animal Flash Cards</Link>
         </header>
         <Outlet   />
         </>
