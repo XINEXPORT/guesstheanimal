@@ -19,4 +19,10 @@
     margin: auto;
     display: block;
 }
+p{
+    display: block;
+    margin-top: 6em;
+    font-weight: bold;
+    line-height: 2rem;
+}
 
