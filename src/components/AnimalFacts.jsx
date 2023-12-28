@@ -28,7 +28,7 @@ const AnimalFacts = () => {
             <img src={animalImg} alt={`Animal ${animalName}`} />
           </>
         ) : (
-          <p>{animalDetails}</p>
+          <p id="animal-details">{animalDetails}</p>
         )}
       </div>
     );
