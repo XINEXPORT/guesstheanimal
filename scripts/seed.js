@@ -2,7 +2,7 @@
 //REFERENCE seed.js from WB-ASSESS-5
 
 import {Op} from 'sequelize'
-import {db, Animal} from '../database/model.js'
+import {db, Animal, User} from '../database/model.js'
 
 //FORCE TRUE NEEDS TO BE AT THE TOP FILE
 //FORCE TRUE MEANS DROP ALL TABLES AND RESEED
@@ -73,6 +73,13 @@ const owl = await Animal.create({
     animalDetails:'Owls are farsighted, meaning they can’t see things close to their eyes clearly.'
 
 })
+
+//USER SEED
+for (let i=0; i < 4; i++){
+    await User.create({email: `test${i}@email.com`, password:'test'})
+}
+
+
 
 console.log(rooster)
 console.log(cat)

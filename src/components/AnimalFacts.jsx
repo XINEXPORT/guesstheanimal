@@ -1,55 +1,51 @@
 import './AnimalFacts.css';
-import Home from './Home.jsx';
-import {useState} from 'react';
+import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
-import {Link} from 'react-router-dom'
 
+const AnimalFacts = () => {
+  const { animals } = useLoaderData();
 
-const AnimalFacts = ({})=>{
-const {animals} =useLoaderData()
-const [animalName, setAnimalName] = useState()
-const [animalImg, setAnimalImg] = useState()    
-const [animalDetails, setAnimalDetails] = useState()
+  const AnimalCard = ({ animalName, animalImg, animalDetails }) => {
+    const [showDetails, setShowDetails] = useState(true);
+    const [backgroundColor, setBackgroundColor] = useState('#F1E3B7');
 
+    const toggleCard = () => {
+      setShowDetails(!showDetails);
+      setBackgroundColor(backgroundColor === '#ffc0cb' ? 'pink' : '#ffc0cb');
+    };
 
-let allAnimals = animals.map((animalObj) => (
-    <div key={animalObj.id}>
-      <h1>{animalObj.animalName}</h1>
-      <img src={animalObj.animalImg} alt={`Animal ${animalObj.id}`} />
-      <p>{animalObj.animalDetails}</p>
-    </div>
-  ));
+    const cardStyle = {
+      background: backgroundColor,
+      width: '300px', 
+      height: showDetails ? '500px' : '500px', 
+    };
+    
+    return (
+      <div className="front-card" onClick={toggleCard} style={cardStyle}>
+        {showDetails ? (
+          <>
+            <h1>{animalName}</h1>
+            <img src={animalImg} alt={`Animal ${animalName}`} />
+          </>
+        ) : (
+          <p>{animalDetails}</p>
+        )}
+      </div>
+    );
+  };
 
-console.log(allAnimals)
-
-return(
-    <main id = "animal-cards">
-    <div id = "rooster">
-    {allAnimals[0]}
+  return (
+    <div>
+      {animals.map((animal, index) => (
+        <AnimalCard
+          key={index}
+          animalName={animal.animalName}
+          animalImg={animal.animalImg}
+          animalDetails={animal.animalDetails}
+        />
+      ))}
     </div>
-    <div id = "cat">
-    {allAnimals[1]}
-    </div>
-    <div id = "duck">
-    {allAnimals[2]}
-    </div>
-    <div id = "pig">
-    {allAnimals[3]}
-    </div>
-    <div id = "dog">
-    {allAnimals[4]}
-    </div>
-    <div id = "fly">
-    {allAnimals[5]}
-    </div>
-    <div id = "mouse">
-    {allAnimals[6]}
-    </div>
-    <div id = "owl"> 
-    {allAnimals[7]}
-    </div> 
-    </main>
-)
-}
+  );
+};
 
 export default AnimalFacts;
