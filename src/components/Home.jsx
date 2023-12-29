@@ -20,7 +20,6 @@ const Home = ({}) => {
 
     return(
         <main id="home">
-            <h1>Welcome to Guess the Animal</h1>
             <div id = "allanimals">
             {allAnimals}
             </div>
