@@ -1,23 +1,17 @@
 #root{
-  max-width: 1280px;
+  max-width: 1880px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 4rem;
   text-align: center;
 }
 #navlinks{
   padding: 1rem;
   font-size: x-large;
-  text-align: left;
 }
-#homelink{
+#homelink, #gamelink, #animal-flashlink, #login{
   margin: 10%;
   color: white;
 }
-#gamelink{  
-  margin: 10%;
-  color: white;
-}
-#animal-flashlink{
-  margin: 10%;
-  color: white;
+#main{
+  margin-top: 140px;
 }

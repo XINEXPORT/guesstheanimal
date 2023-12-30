@@ -5,6 +5,7 @@ import MainGame from './components/MainGame.jsx'
 import Quiz from './components/Quiz.jsx'
 import axios from 'axios';
 import AnimalFacts from './components/AnimalFacts.jsx';
+import LoginModal from './components/LoginModal.jsx';
 
 
 //PAGE ROUTES
@@ -37,6 +38,16 @@ const router=createBrowserRouter(
             let res = await axios.get ('/api/animal')
             return {animals:res.data}
         }}
+/>
+
+<Route
+//LOGIN
+path = "/login"
+element={<LoginModal/>}
+Loader = {async()=>{
+    let res = await axios.get('/api/login')
+    return {login:res.data}
+}}
 
 />
 </Route>

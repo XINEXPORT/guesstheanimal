@@ -12,7 +12,7 @@ const LoginModal = () => {
 
     const [regEmail, setRegEmail] = useState('')
     const [regPassword, setRegPassword] = useState('')
-
+    
     const loginUser = async () =>{
         if(logEmail && logPassword){
             const {data} = await axios.post('/api/auth/login',{
@@ -99,4 +99,3 @@ export default LoginModal
 
 
 
-}

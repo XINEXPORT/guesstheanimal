@@ -8,7 +8,6 @@ import IncorrectAnswer  from './IncorrectAnswer.jsx';
 
 
 //PROPERTIES
-
 const MainGame = ()=>{
     const {animals} =useLoaderData()
     let choices = lodash.sampleSize(animals, 3)
