@@ -1,32 +1,41 @@
 import './Dashboard.css';
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import {useState, useEffect} from 'react'
+import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
-  const { users } = useLoaderData();
+  const {user} = useLoaderData();
+  const navigate = useNavigate();
+  const [view, myView] = useState()
+
+  console.log(user);
 
   const MyDashboard = ({ firstName, lastName, email }) => {
     return (
-      <div className='dashboard'>
-        <p>{firstName}</p>
-        <p>{lastName}</p>
-        <p>{email}</p>
+      <div className='my-dashboard'>
+        <h1>Hello,{firstName} {lastName}</h1>
+        <p>Email: {email}</p>
       </div>
     );
   };
 
-  return (
+  useEffect(()=>{
+    if(user.error){
+      navigate("/login")
+    }
+  }, [])
+
+    return(
     <div>
-      {users.map((user, index) => (
-        <MyDashboard
-          key={index}
-          firstName={user.firstName}
-          lastName={user.lastName}
-          email={user.email}
-        />
-      ))}
-    </div>
-  );
+
+      <MyDashboard
+        firstName={user.firstName}
+        lastName={user.lastName}
+        email={user.email}
+      />
+    
+  </div>
+    );
 };
 
 export default Dashboard;

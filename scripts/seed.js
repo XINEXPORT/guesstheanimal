@@ -88,7 +88,6 @@ const christine = await User.create({
     password: 'test',
 })
 
-
 console.log(rooster)
 console.log(cat)
 console.log(christine)

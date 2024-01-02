@@ -2,7 +2,7 @@ import ViteExpress from 'vite-express';
 import morgan from 'morgan';
 import express from 'express';
 import session from 'express-session';
-import { getAnimals } from './controllers/controllers.js';
+import { getAnimals, getUsers } from './controllers/controllers.js';
 import {
   login,
   logout,
@@ -23,12 +23,18 @@ app.use(
 
 ViteExpress.config({ printViteDevServerHost: true });
 
-// Routes go here
+// ENDPOINTS GO HERE
+
 //AUTH ENDPOINTS
-app.get('/api/animal', getAnimals);
 app.get('/api/auth/status', checkStatus);
 app.post('/api/auth/login', login);
 app.post('/api/auth/logout', logout);
 app.post('/api/auth/register', register);
+
+//ANIMAL ENDPOINT
+app.get('/api/animal', getAnimals);
+
+//USERS ENDPOINT
+app.get('/api/user', getUsers);
 
 ViteExpress.listen(app, port, () => console.log(`Server is listening on http://localhost:${port}`));

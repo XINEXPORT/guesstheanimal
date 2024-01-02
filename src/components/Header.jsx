@@ -39,9 +39,11 @@ const Header = () => {
         <Link to="/animalflashcards" id="animal-flashlink">
           Animal Flash Cards
         </Link>
+        {loggedIn ? (  
         <Link to="/dashboard" id="dashboard">
           My Dashboard
-        </Link>
+        </Link>): <></>
+        }
         <nav to="/login" id="login-register">
           {loggedIn ? (
             <button id = "logout" onClick={logoutUser}>Logout</button>

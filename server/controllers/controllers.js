@@ -11,13 +11,20 @@ const getAnimals = async (req,res) =>{
 
 //FETCH ALL USER DATA
 const getUsers = async (req,res) =>{
-    let users = await User.findAll()
-    res.json(users)
+    if(req.session.user){
+        let users = await User.findOne(
+            {where: {
+                userId: req.session.user.userId
+            }}
+        )
+        res.json(users)
+    } else{
+        res.json({error: 'not logged in'})
+    }  
 }
 
 //FETCH ALL ANIMAL API DATA
 // const getAnimalsAPI = async (req, res)=>{
 // }
 
-export {getAnimals}
-export {getUsers}
+export {getAnimals, getUsers}

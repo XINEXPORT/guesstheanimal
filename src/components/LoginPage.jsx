@@ -24,7 +24,7 @@ const LoginPage = () => {
             if(data.success){
                 dispatch({type:'login', payload: data.user})
                 dispatch({type:'page-off'})
-                navigate("/")
+                navigate("/Dashboard")
     } else{
         alert('invalid data')
     }
@@ -75,6 +75,11 @@ return(
 
         <section className = "form">
         <h1>Register</h1>
+
+
+
+
+        
             <label htmlFor = "reg-email">Email: </label>
             <input type="text"
                     name = "reg-email"
