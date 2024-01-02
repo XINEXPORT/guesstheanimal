@@ -79,10 +79,16 @@ for (let i=0; i < 4; i++){
     await User.create({email: `test${i}@email.com`, password:'test'})
 }
 
+const christine = await User.create({
+    firstName: 'Christine',
+    lastName: 'Hoang',
+    email: 'christinehoangt@gmail.com',
+    password: 'test',
+})
 
 
 console.log(rooster)
 console.log(cat)
-console.log(pig)
+console.log(christine)
 
 await db.close()

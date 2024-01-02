@@ -23,3 +23,7 @@
     flex-direction: column;
     align-items: center;
 }
+#login{
+    margin: 10%;
+    color: white;
+}

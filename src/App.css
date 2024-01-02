@@ -8,10 +8,6 @@
   padding: 1rem;
   font-size: x-large;
 }
-#homelink, #gamelink, #animal-flashlink, #login{
-  margin: 10%;
-  color: white;
-}
 #main{
   margin-top: 140px;
 }

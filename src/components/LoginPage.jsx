@@ -1,11 +1,13 @@
 import { useSelector, useDispatch } from "react-redux"
 import {useState} from 'react'
 import axios from "axios"
-import './LoginModal.css'
+import './LoginPage.css'
+import { useNavigate } from "react-router-dom"
 
-const LoginModal = () => {
+const LoginPage = () => {
     const dispatch = useDispatch()
-    const modal = useSelector(state =>state.modal)
+    const navigate = useNavigate()
+    const page = useSelector(state =>state.page)
 
     const [logEmail, setLogEmail] = useState('')
     const [logPassword, setLogPassword] = useState('')
@@ -21,7 +23,8 @@ const LoginModal = () => {
             })
             if(data.success){
                 dispatch({type:'login', payload: data.user})
-                dispatch({type:'modal-off'})
+                dispatch({type:'page-off'})
+                navigate("/")
     } else{
         alert('invalid data')
     }
@@ -38,7 +41,7 @@ const LoginModal = () => {
             })
             if(data.success){
                 dispatch({type:'login', payload: data.user})
-                dispatch({type:'modal-off'})
+                dispatch({type:'page-off'})
     } else{
         alert('invalid data')
         }
@@ -48,7 +51,7 @@ const LoginModal = () => {
 }
 
 return(
-    <div style={{display:modal}} id="modal">
+    <div style={{display:page}} id="page">
         <main id="forms">
         <section className = "form">
             <h1>Login</h1>
@@ -93,7 +96,7 @@ return(
 )
 }
 
-export default LoginModal
+export default LoginPage
 
 
 

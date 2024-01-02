@@ -46,7 +46,7 @@ Animal.init(
 
 //USERS ASSOCIATION HERE FOR LOGIN FUNCTINALITY
 
-export class User extends Model{
+class User extends Model{
     [util.inspect.customer](){
         returnthis.toJSON()
     }
@@ -60,6 +60,14 @@ User.init(
             primaryKey:true,
             unique:true,
             allowNull:false,
+        },
+        firstName:{
+            type:DataTypes. STRING,
+            unique:false,
+        },
+        lastName:{
+            type:DataTypes. STRING,
+            unique:false,
         },
         email: {
             type:DataTypes. STRING,
@@ -83,4 +91,4 @@ if(process.argv[1]===url.fileURLToPath(import.meta.url)){
     console.log("Finished syncing database!")
 }
 
-export {Animal}
+export {Animal, User}

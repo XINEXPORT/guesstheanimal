@@ -22,10 +22,11 @@ button{
   flex-direction: row;
   align-items: flex-end;
   justify-content: center;
+
 }
 img{
   width: 280px;
-  padding: .5rem;
+  margin: 1px;
 }
 #allanimals{
   margin-top: 40px;
@@ -33,6 +34,9 @@ img{
   align-items: flex-end;
   justify-content: center;
   flex-wrap: wrap;
+}
+#home{
+  display: flex;
 }
 h1{
   padding: 2rem;

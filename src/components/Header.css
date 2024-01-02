@@ -20,7 +20,7 @@ header h1{
 nav{
     display:flex;
     align-items: center;
-    margin-right: 10%;
+    margin-right: 20%;
 }
 nav a {
     font-size: 1.5em;
@@ -30,4 +30,22 @@ nav a {
 }
 nav a:hover{
     text-decoration: underline;
+}
+#homelink, #gamelink, #animal-flashlink{
+    margin: 7%;
+    color: white;
+}
+#logout{
+    border-radius: .5rem;
+    background-color: #FFFD98;
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+}
+#login{
+        border-radius: .5rem;
+        background-color: #FFFD98;
+        padding: 10px;
+        font-size: large;
+        font-weight: bold;
 }

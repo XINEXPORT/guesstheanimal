@@ -5,7 +5,8 @@ import MainGame from './components/MainGame.jsx'
 import Quiz from './components/Quiz.jsx'
 import axios from 'axios';
 import AnimalFacts from './components/AnimalFacts.jsx';
-import LoginModal from './components/LoginModal.jsx';
+import LoginPage from './components/LoginPage.jsx';
+import Dashboard from './components/Dashboard.jsx';
 
 
 //PAGE ROUTES
@@ -19,7 +20,8 @@ const router=createBrowserRouter(
                 let res = await axios.get('/api/animal')
                 return {animals:res.data}
                 //this is what use loaderdata returns for HomePage
-            }}/>
+            }}
+        />
     <Route
 //GAME PAGE
         path = "/game"
@@ -39,11 +41,19 @@ const router=createBrowserRouter(
             return {animals:res.data}
         }}
 />
-
+<Route
+//MY DASHBOARD
+        path = "/dashboard"
+        element={<Dashboard/>}
+        loader = {async()=>{
+            let res = await axios.get ('/api/user')
+            return {user:res.data}
+        }}
+/>
 <Route
 //LOGIN
 path = "/login"
-element={<LoginModal/>}
+element={<LoginPage/>}
 Loader = {async()=>{
     let res = await axios.get('/api/login')
     return {login:res.data}
