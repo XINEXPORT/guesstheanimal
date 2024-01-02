@@ -13,7 +13,7 @@ const Dashboard = () => {
   const MyDashboard = ({ firstName, lastName, email }) => {
     return (
       <div className='my-dashboard'>
-        <h1>Hello,{firstName} {lastName}</h1>
+        <h1>Hello, {firstName} {lastName}</h1>
         <p>Email: {email}</p>
       </div>
     );

@@ -14,7 +14,10 @@ const LoginPage = () => {
 
     const [regEmail, setRegEmail] = useState('')
     const [regPassword, setRegPassword] = useState('')
-    
+    const [regFirstName, setRegFirstName] = useState('')
+    const [regLastName, setRegLastName] = useState('')
+
+    //If Login information doesn't exsist, then display error message
     const loginUser = async () =>{
         if(logEmail && logPassword){
             const {data} = await axios.post('/api/auth/login',{
@@ -24,7 +27,7 @@ const LoginPage = () => {
             if(data.success){
                 dispatch({type:'login', payload: data.user})
                 dispatch({type:'page-off'})
-                navigate("/Dashboard")
+                navigate("/dashboard")
     } else{
         alert('invalid data')
     }
@@ -33,20 +36,25 @@ const LoginPage = () => {
     }
     }
 
+//If Registered User exsists, then display error message
     const registerUser = async() =>{
         if(regEmail && regPassword){
             const {data} = await axios.post('/api/auth/register', {
+                firstName: regFirstName,
+                lastName: regLastName,
                 email: regEmail,
                 password: regPassword
             })
+            console.log(data)
             if(data.success){
                 dispatch({type:'login', payload: data.user})
                 dispatch({type:'page-off'})
+                navigate("/dashboard")
     } else{
         alert('invalid data')
         }
     } else{
-        alert('need both email and password')
+        alert('Please provide an email and password')
     }
 }
 
@@ -76,10 +84,18 @@ return(
         <section className = "form">
         <h1>Register</h1>
 
-
-
-
-        
+            <label htmlFor = "firstname">First Name: </label>
+            <input type="text"
+                    name = "firstname"
+                    placeholder = "enter your first name"
+                    onChange = {(e)=> setRegFirstName(e.target.value)}
+            ></input>
+            <label htmlFor = "lastname">Last Name: </label>
+            <input type="text"
+                    name = "lastname"
+                    placeholder = "enter your last name"
+                    onChange = {(e)=> setRegLastName(e.target.value)}
+            ></input>
             <label htmlFor = "reg-email">Email: </label>
             <input type="text"
                     name = "reg-email"
