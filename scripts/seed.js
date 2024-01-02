@@ -75,8 +75,10 @@ const owl = await Animal.create({
 })
 
 //USER SEED
-for (let i=0; i < 4; i++){
-    await User.create({email: `test${i}@email.com`, password:'test'})
+let arr = [{firstName: 'John', lastName: 'Doe',}, {firstName: 'Christopher', lastName: 'Walken'}, {firstName: 'Sean', lastName: 'Smith'}]
+
+for (let i=0; i < arr.length; i++){
+    await User.create({email: `test${i}@email.com`, password:'test', firstName: arr[i].firstName, lastName: arr[i].lastName})
 }
 
 const christine = await User.create({
