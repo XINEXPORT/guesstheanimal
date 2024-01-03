@@ -2,7 +2,7 @@ import ViteExpress from 'vite-express';
 import morgan from 'morgan';
 import express from 'express';
 import session from 'express-session';
-import { getAnimals, getUsers } from './controllers/controllers.js';
+import { getAnimals, getUsers, getFavoriteAnimals } from './controllers/controllers.js';
 import {
   login,
   logout,
@@ -33,6 +33,9 @@ app.post('/api/auth/register', register);
 
 //ANIMAL ENDPOINT
 app.get('/api/animal', getAnimals);
+
+//FAVORITE ANIMALS ENDPOINT
+app.get('/api/favoriteanimals', getFavoriteAnimals);
 
 //USERS ENDPOINT
 app.get('/api/user', getUsers);

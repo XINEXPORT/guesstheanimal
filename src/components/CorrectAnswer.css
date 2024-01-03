@@ -1,0 +1,14 @@
+#correct{
+    padding: 80px;
+    text-align: center;
+    font-size: 70px;
+    color: rgb(0, 0, 0);
+}
+#play-again{
+    margin: 1em;
+    padding: .5em;
+    font-size: xx-large;
+    background-color: rgb(255, 255, 255);
+    border-radius: .5rem;
+    justify-content: center;
+  }

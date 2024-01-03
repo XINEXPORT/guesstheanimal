@@ -82,7 +82,7 @@ User.init(
 }
 )
 
-//FAVORITEANIMALS TABLE
+//FAVORITE ANIMALS TABLE
 class FavoriteAnimal extends Model{
     [util.inspect.customer](){
         returnthis.toJSON()

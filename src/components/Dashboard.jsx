@@ -1,25 +1,27 @@
 import './Dashboard.css';
+import FavoriteAnimals from './FavoriteAnimals.jsx';
 import React from 'react';
-import {useState, useEffect} from 'react'
+import {useEffect} from 'react'
 import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
-  const {user} = useLoaderData();
+  const {userInfo} = useLoaderData();
+  const favAnimalData = useLoaderData();
   const navigate = useNavigate();
 
-  console.log(user);
+  console.log(favAnimalData);
 
   const MyDashboard = ({ firstName, lastName, email }) => {
     return (
       <div className='my-dashboard'>
-        <h1 class = "rainbow rainbow_text_animated">Hello, {firstName} {lastName}</h1>
+        <h1 className = "rainbow rainbow_text_animated">Hello, {firstName} {lastName}</h1>
         <p>Email: {email}</p>
       </div>
     );
   };
 
   useEffect(()=>{
-    if(user.error){
+    if(userInfo.error){
       navigate("/login")
     }
   }, [])
@@ -27,12 +29,14 @@ const Dashboard = () => {
     return(
     <div id="mydashboard">
       <MyDashboard
-        firstName={user.firstName}
-        lastName={user.lastName}
-        email={user.email}
+        firstName={userInfo.firstName}
+        lastName={userInfo.lastName}
+        email={userInfo.email}
       />
-      <div id = "myfavanimals">
-      <p>My Favorite Animals</p>
+      <div>
+        <FavoriteAnimals
+        favoriteAnimalId={favAnimalData}
+        />
       </div>
   </div>
   

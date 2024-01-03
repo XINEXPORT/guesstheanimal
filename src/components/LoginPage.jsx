@@ -62,7 +62,7 @@ return(
     <div style={{display:page}} id="page">
         <main id="forms">
         <section className = "form">
-            <h1>Login</h1>
+            <h1 className = "title">Login</h1>
             <label htmlFor = "log-email">Email: </label>
             <input type="text"
                     name = "log-email"
@@ -82,7 +82,7 @@ return(
         </section>
 
         <section className = "form">
-        <h1>Register</h1>
+        <h1 className = "title">Register</h1>
 
             <label htmlFor = "firstname">First Name: </label>
             <input type="text"

@@ -1,4 +1,4 @@
-import '../index.css';
+import './CorrectAnswer.css';
 import Quiz from './Quiz.jsx';
 import MainGame from "./MainGame"
 import IncorrectAnswer  from './IncorrectAnswer.jsx';
@@ -13,7 +13,7 @@ let newChoices = lodash.sampleSize(animals, 3)
 
 return(
 <main>
-    <h1>
+    <h1 id = "correct">
         Correct!
     </h1>
         <button id="play-again" onClick={()=>{

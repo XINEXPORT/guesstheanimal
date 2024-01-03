@@ -8,11 +8,11 @@ return(
    <div className='sound-btn'>
     <audio src={sound} controls></audio>
 
-    <button id="select" onClick={() =>{
+    <button id="sound-select-btn" onClick={() =>{
         setUserResponse(animalId)
         setAnswered(true)
     }}>
-    <p>Select</p>
+    <p id = "select-sound">Select</p>
     </button>
    </div>
 

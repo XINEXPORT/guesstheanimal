@@ -24,7 +24,7 @@ const AnimalFacts = () => {
       <div className="front-card" onClick={toggleCard} style={cardStyle}>
         {showDetails ? (
           <>
-            <h1>{animalName}</h1>
+            <h1 className = "animal-name">{animalName}</h1>
             <img src={animalImg} alt={`Animal ${animalName}`} />
           </>
         ) : (

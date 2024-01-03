@@ -1,28 +1,15 @@
-#dashboard{
-    margin: 10%;
-    color: white;
-}
-#mydashboard{
-    display: inline-block;
-    align-items: center;
-    margin-right: 50%;
-}
-h1{
-    text-align: left;
-    font-size: large;
-}
-p{
-    text-align: left;
-    margin-left: 50px;;
-}
-.my-dashboard{
-    margin: 10%;
+#myfavanimals{
     color: black;
     background-color: white;
     max-width: 500px;
     height: 500px;
     border-radius: .5rem;
+    margin: auto;
     border: 2px solid black;
+}
+p{
+    text-align: center;
+    padding: 2rem;;
 }
 .rainbow {
     text-align: center;

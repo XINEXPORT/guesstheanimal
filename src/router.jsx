@@ -7,6 +7,7 @@ import axios from 'axios';
 import AnimalFacts from './components/AnimalFacts.jsx';
 import LoginPage from './components/LoginPage.jsx';
 import Dashboard from './components/Dashboard.jsx';
+import FavoriteAnimals from './components/FavoriteAnimals.jsx';
 
 
 //PAGE ROUTES
@@ -46,8 +47,12 @@ const router=createBrowserRouter(
         path = "/dashboard"
         element={<Dashboard/>}
         loader = {async()=>{
-            let res = await axios.get ('/api/user')
-            return {user:res.data}
+            let userInfo = await axios.get ('/api/user')
+            let favAnimalData = await axios.get ('/api/favoriteanimals')
+            console.log(favAnimalData)
+            return {favoriteanimals:favAnimalData.data,
+                    userInfo:userInfo.data
+                }
         }}
 />
 <Route
@@ -58,7 +63,6 @@ Loader = {async()=>{
     let res = await axios.get('/api/login')
     return {login:res.data}
 }}
-
 />
 </Route>
     )

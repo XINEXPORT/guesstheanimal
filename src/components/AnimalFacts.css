@@ -25,4 +25,7 @@
     font-weight: bold;
     line-height: 2rem;
 }
-
+.animal-name{
+    font-size: 35px;
+    text-align: center;
+}

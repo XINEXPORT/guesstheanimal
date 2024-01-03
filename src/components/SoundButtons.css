@@ -1,5 +1,4 @@
-#select{
-    font-size: xx-large;
+#sound-select-btn{
     align-content: center;
     background-color: white;
     border-radius: .5rem;
@@ -9,4 +8,14 @@
 }
 audio::-webkit-media-controls-panel {
     background-color: #FFFD98;
+  }
+#select-sound{
+    text-align: center;
+    font-size: x-large;
+}
+.sound-btn{
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 2rem;
   }

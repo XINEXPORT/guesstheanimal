@@ -23,6 +23,7 @@ import { useNavigate } from 'react-router-dom';
     const { data } = await axios.post('/api/auth/logout');
     if (data.success) {
       dispatch({ type: 'logout' });
+      navigate("/")
     }
   };
 
