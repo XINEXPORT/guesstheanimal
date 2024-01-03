@@ -2,7 +2,7 @@
 //REFERENCE seed.js from WB-ASSESS-5
 
 import {Op} from 'sequelize'
-import {db, Animal, User} from '../database/model.js'
+import {db, Animal, User, FavoriteAnimal} from '../database/model.js'
 
 //FORCE TRUE NEEDS TO BE AT THE TOP FILE
 //FORCE TRUE MEANS DROP ALL TABLES AND RESEED
@@ -88,8 +88,15 @@ const christine = await User.create({
     password: 'test',
 })
 
+//FAVORITE ANIMAL SEED
+const christineFavAnimals = await FavoriteAnimal.create({
+    userId: '4',
+    animalId: '2'
+})
+
 console.log(rooster)
 console.log(cat)
 console.log(christine)
+console.log(christineFavAnimals)
 
 await db.close()

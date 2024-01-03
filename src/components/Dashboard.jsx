@@ -6,14 +6,13 @@ import { useLoaderData, useNavigate } from 'react-router-dom';
 const Dashboard = () => {
   const {user} = useLoaderData();
   const navigate = useNavigate();
-  const [view, myView] = useState()
 
   console.log(user);
 
   const MyDashboard = ({ firstName, lastName, email }) => {
     return (
       <div className='my-dashboard'>
-        <h1>Hello, {firstName} {lastName}</h1>
+        <h1 class = "rainbow rainbow_text_animated">Hello, {firstName} {lastName}</h1>
         <p>Email: {email}</p>
       </div>
     );
@@ -26,15 +25,17 @@ const Dashboard = () => {
   }, [])
 
     return(
-    <div>
-
+    <div id="mydashboard">
       <MyDashboard
         firstName={user.firstName}
         lastName={user.lastName}
         email={user.email}
       />
-    
+      <div id = "myfavanimals">
+      <p>My Favorite Animals</p>
+      </div>
   </div>
+  
     );
 };
 

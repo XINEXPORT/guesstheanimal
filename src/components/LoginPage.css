@@ -14,11 +14,15 @@
     justify-content: center;    
     align-items: center;
     background-color: white;
-    border: 3px solid black;
+    border: 5px solid black;
     border-radius: 25px;
     gap: 50px;
     padding: 20px;
     width: 20%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 .form{
     margin: 10px;
@@ -31,3 +35,7 @@
     margin: 10%;
     color: white;
 }
+h1{
+    text-decoration: underline;
+}
+

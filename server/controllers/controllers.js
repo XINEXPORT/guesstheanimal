@@ -9,7 +9,7 @@ const getAnimals = async (req,res) =>{
     res.json(animals)
 }
 
-//FETCH ALL USER DATA
+//FETCH THE LOGGED IN USER
 const getUsers = async (req,res) =>{
     if(req.session.user){
         let users = await User.findOne(

@@ -6,8 +6,8 @@ import LoginPage from './LoginPage.jsx';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 
-// Header Component
-const Header = () => {
+  // Header Component
+  const Header = () => {
   // Header State
   const dispatch = useDispatch();
   const navigate = useNavigate();

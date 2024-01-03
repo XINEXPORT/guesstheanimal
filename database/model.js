@@ -6,6 +6,7 @@ import url from 'url';
 
 export const db = await connectToDB('postgresql:///animals'); //This is the dbURI
 
+//ANIMALS TABLE
 class Animal extends Model{
     [util.inspect.custom]() {
     return this.toJSON()};
@@ -41,11 +42,7 @@ Animal.init(
     },
 );
 
-// Animal.hasMany(Users,{foreignKey: 'animalId'});
-// Users.belongsTo(Animal, {foreignKey: 'animalId});
-
-//USERS ASSOCIATION HERE FOR LOGIN FUNCTINALITY
-
+//USERS TABLE
 class User extends Model{
     [util.inspect.customer](){
         returnthis.toJSON()
@@ -85,10 +82,41 @@ User.init(
 }
 )
 
+//FAVORITEANIMALS TABLE
+class FavoriteAnimal extends Model{
+    [util.inspect.customer](){
+        returnthis.toJSON()
+    }
+}
+
+FavoriteAnimal.init(
+    {
+        favoriteAnimalId:{
+            type: DataTypes.INTEGER,
+            autoIncrement: true,
+            primaryKey: true,
+            unique: true,
+            allowNull: false,
+        }
+     },
+{
+    modelName: 'favoriteAnimal',
+    sequelize: db, 
+},
+);
+
+//ALWAYS MAKE SURE 'ID' IS 'Id'
+User.hasMany(FavoriteAnimal, {foreignKey: 'userId'});
+FavoriteAnimal.belongsTo(User, {foreignKey: 'userId'});
+
+Animal.hasMany(FavoriteAnimal, {foreignKey: 'animalId'});
+FavoriteAnimal.belongsTo(Animal, {foreignKey: 'animalId'});
+
+
 if(process.argv[1]===url.fileURLToPath(import.meta.url)){
     console.log("Syncing database")
     await db.sync({force:true});
     console.log("Finished syncing database!")
 }
 
-export {Animal, User}
+export {Animal, User, FavoriteAnimal}

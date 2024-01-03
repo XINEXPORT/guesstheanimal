@@ -1,8 +1,6 @@
 import '../index.css';
-import Quiz from './Quiz.jsx';
 import {useState} from 'react'
 import { useLoaderData } from 'react-router-dom';
-import {Link} from 'react-router-dom'
 
 const Home = ({}) => {
     const {animals} =useLoaderData()
