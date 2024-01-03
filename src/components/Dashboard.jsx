@@ -13,7 +13,7 @@ const Dashboard = () => {
 
   const MyDashboard = ({ firstName, lastName, email }) => {
     return (
-      <div className='my-dashboard'>
+      <div className='my-dashboardcard'>
         <h1 className = "rainbow rainbow_text_animated">Hello, {firstName} {lastName}</h1>
         <p>Email: {email}</p>
       </div>
@@ -33,7 +33,7 @@ const Dashboard = () => {
         lastName={userInfo.lastName}
         email={userInfo.email}
       />
-      <div>
+      <div id = "myfavoriteanimals">
         <FavoriteAnimals
         favoriteAnimalId={favAnimalData}
         />

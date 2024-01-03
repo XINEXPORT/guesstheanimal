@@ -1,5 +1,10 @@
-.front-card{
+#cardcontainer{
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.animal-card{
+    display: inline-block;
     flex-direction: row;
     grid-gap: 20px;
     justify-content: center;
@@ -8,22 +13,24 @@
     border-radius: 1rem;
     margin: 2em;
     padding: 1em;
-    display: inline-block;
     text-align: center;
     cursor: pointer;
-    min-height: 300px;
+    height: 500px;
+    width: 300px;
     color: black;
     font-size: x-large
 }
-.front-card img {
+.animal-card img {
+    height: 200px;
+    width: 200px;
     margin: auto;
     display: block;
 }
 #animal-details{
     display: block;
-    margin-top: 6em;
     font-weight: bold;
-    line-height: 2rem;
+    justify-content: center;
+    text-align: center;
 }
 .animal-name{
     font-size: 35px;

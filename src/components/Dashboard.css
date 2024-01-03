@@ -3,9 +3,13 @@
     color: white;
 }
 #mydashboard{
-    display: inline-block;
+    display: flex;
     align-items: center;
     margin-right: 50%;
+}
+#myfavoriteanimals{
+    display: inline-block;
+    width: 100%;
 }
 h1{
     text-align: left;
@@ -15,7 +19,7 @@ p{
     text-align: left;
     margin-left: 50px;;
 }
-.my-dashboard{
+.my-dashboardcard{
     margin: 10%;
     color: black;
     background-color: white;

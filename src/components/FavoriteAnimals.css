@@ -1,15 +1,15 @@
 #myfavanimals{
     color: black;
     background-color: white;
-    max-width: 500px;
     height: 500px;
+    width: 600px;
     border-radius: .5rem;
     margin: auto;
     border: 2px solid black;
 }
 p{
     text-align: center;
-    padding: 2rem;;
+    padding: 2rem;
 }
 .rainbow {
     text-align: center;

@@ -39,6 +39,8 @@ nav a:hover{
     border-radius: .5rem;
     background-color: #FFFD98;
     padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
     font-size: large;
     font-weight: bold;
 }

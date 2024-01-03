@@ -17,15 +17,16 @@ const AnimalFacts = () => {
     const cardStyle = {
       background: backgroundColor,
       width: '300px', 
-      height: showDetails ? '500px' : '500px', 
+      height: showDetails ? '500px' : '500px'
     };
     
     return (
-      <div className="front-card" onClick={toggleCard} style={cardStyle}>
+      <div className="animal-card" onClick={toggleCard} style={cardStyle} >
+
         {showDetails ? (
           <>
             <h1 className = "animal-name">{animalName}</h1>
-            <img src={animalImg} alt={`Animal ${animalName}`} />
+            <div><img src={animalImg} alt={`Animal ${animalName}`} /></div>
           </>
         ) : (
           <p id="animal-details">{animalDetails}</p>
@@ -35,17 +36,17 @@ const AnimalFacts = () => {
   };
 
   return (
-    <div>
-      {animals.map((animal, index) => (
-        <AnimalCard
-          key={index}
-          animalName={animal.animalName}
-          animalImg={animal.animalImg}
-          animalDetails={animal.animalDetails}
-        />
-      ))}
-    </div>
-  );
+    <div id = "cardcontainer">
+       {animals.map((animal, index) => (
+         <AnimalCard
+           key={index}
+           animalName={animal.animalName}
+           animalImg={animal.animalImg}
+           animalDetails={animal.animalDetails}
+         />
+       ))}
+     </div>
+   );
 };
 
 export default AnimalFacts;
