@@ -94,6 +94,11 @@ const christineFavAnimals = await FavoriteAnimal.create({
     animalId: '2'
 })
 
+const christineFavAnimals2 = await FavoriteAnimal.create({
+    userId: '4',
+    animalId: '1'
+})
+
 console.log(rooster)
 console.log(cat)
 console.log(christine)

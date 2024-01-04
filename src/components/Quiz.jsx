@@ -1,5 +1,4 @@
 import '../index.css';
-import axios from 'axios';
 import {useState} from 'react'
 import SoundButtonLink from './SoundButtons';
 import lodash from 'lodash';
@@ -8,8 +7,6 @@ const Quiz = ({q, setAnswered, setUserResponse})=>{
     const [animalName, setAnimalName] = useState()
     const [animalImg, setAnimalImg] = useState()
     const [animalQuestion, setAnimalQuestion] = useState()
-
-    console.log(q)
 
     let quizArr = lodash.shuffle(q)
     let btns = quizArr.map(

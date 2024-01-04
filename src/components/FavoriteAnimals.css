@@ -1,15 +1,28 @@
 #myfavanimals{
     color: black;
-    background-color: white;
+    background-color: blanchedalmond;
     height: 500px;
     width: 600px;
     border-radius: .5rem;
+    border: 3px solid rgb(0, 0, 0);
     margin: auto;
-    border: 2px solid black;
 }
-p{
+#myfavlist{
+    display: flex;
+    flex-wrap: wrap;    
+    justify-content: center;
+}
+h1{
     text-align: center;
     padding: 2rem;
+    margin-bottom: 20px;
+}
+img{
+    height: 200px;
+    width: 200px;
+}
+.favAnimalName{
+    font-size: x-large;
 }
 .rainbow {
     text-align: center;

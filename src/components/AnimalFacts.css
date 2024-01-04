@@ -8,7 +8,6 @@
     flex-direction: row;
     grid-gap: 20px;
     justify-content: center;
-    background-color: blanchedalmond;
     border: 3px solid rgb(0, 0, 0);
     border-radius: 1rem;
     margin: 2em;
@@ -21,8 +20,8 @@
     font-size: x-large
 }
 .animal-card img {
-    height: 200px;
-    width: 200px;
+    height: 250px;
+    width: 250px;
     margin: auto;
     display: block;
 }

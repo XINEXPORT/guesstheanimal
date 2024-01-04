@@ -12,7 +12,9 @@ const getAnimals = async (req,res) =>{
 
 //FETCH ALL FAVORITE ANIMAL DATA
 const getFavoriteAnimals = async (req,res) =>{
-    let favoriteanimal = await FavoriteAnimal.findAll()
+    let favoriteanimal = await FavoriteAnimal.findAll({
+        include: Animal,
+        })
     console.log("getFavoriteAnimals hit")
     res.json(favoriteanimal)
 }

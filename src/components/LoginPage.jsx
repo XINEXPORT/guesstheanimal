@@ -71,7 +71,7 @@ return(
             ></input>
 
             <label htmlFor = "log-password">Password: </label>
-            <input type="text"
+            <input type="password"
                     name = "log-password"
                     placeholder = "enter your password"
                     onChange = {(e)=> setLogPassword(e.target.value)}
@@ -103,7 +103,7 @@ return(
                     onChange = {(e)=> setRegEmail(e.target.value)}
             ></input>
             <label htmlFor = "reg-password">Password: </label>
-            <input type="text"
+            <input type="password"
                     name = "reg-password"
                     placeholder = "enter your password"
                     onChange = {(e)=> setRegPassword(e.target.value)}

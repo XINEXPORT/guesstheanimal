@@ -9,13 +9,11 @@ const Dashboard = () => {
   const favAnimalData = useLoaderData();
   const navigate = useNavigate();
 
-  console.log(favAnimalData);
-
   const MyDashboard = ({ firstName, lastName, email }) => {
     return (
       <div className='my-dashboardcard'>
         <h1 className = "rainbow rainbow_text_animated">Hello, {firstName} {lastName}</h1>
-        <p>Email: {email}</p>
+        <div id = "email">Email: {email}</div>
       </div>
     );
   };
@@ -35,7 +33,7 @@ const Dashboard = () => {
       />
       <div id = "myfavoriteanimals">
         <FavoriteAnimals
-        favoriteAnimalId={favAnimalData}
+        favoriteAnimalData={favAnimalData}
         />
       </div>
   </div>
