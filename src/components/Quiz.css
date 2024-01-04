@@ -1,0 +1,26 @@
+#allanimals{
+    margin-top: 300px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#animalImg{
+    width: 300px;
+    height: 300px;
+    margin: 1px;
+}
+#animal-qstn{
+    font-size: xx-large;
+    font-weight: bold;
+    margin: auto;
+    margin-bottom: 2%;
+    background-color: #FFFD98;
+    border-radius: 1em;
+    padding: 1em;
+    width: 500px;
+}
+#btns{
+    display: flex;
+    justify-content: center;
+}

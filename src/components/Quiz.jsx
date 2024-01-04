@@ -1,4 +1,4 @@
-import '../index.css';
+import './Quiz.css';
 import {useState} from 'react'
 import SoundButtonLink from './SoundButtons';
 import lodash from 'lodash';
@@ -18,7 +18,7 @@ const Quiz = ({q, setAnswered, setUserResponse})=>{
 return(
     <main className = "quiz">
     <p id="animal-qstn">{q[0].animalQuestion}</p>
-    <img src= {q[0].animalImg}/>
+    <img id = "animalImg" src= {q[0].animalImg}/>
     <div id="btns">{btns}</div>
     </main>
 )

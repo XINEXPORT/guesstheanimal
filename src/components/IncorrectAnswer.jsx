@@ -1,5 +1,5 @@
 import MainGame from "./MainGame"
-import '../index.css';
+import './IncorrectAnswer.css';
 import {Link} from 'react-router-dom'
 import Quiz from './Quiz.jsx';
 

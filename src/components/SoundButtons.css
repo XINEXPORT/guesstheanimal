@@ -17,5 +17,5 @@ audio::-webkit-media-controls-panel {
     flex-direction: row;
     align-items: flex-end;
     justify-content: center;
-    padding: 2rem;
+    padding: 3rem;
   }

@@ -18,10 +18,11 @@ h1{
 #contact-info{
     text-decoration: underline;
     font-weight: bold;
+    font-size: 20px;
     padding-bottom: 20px;
 }
 .form{
-    padding: 2px;
+    padding: 8px;
     margin-right: 2%;
 }
 label{

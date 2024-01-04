@@ -6,16 +6,11 @@ const Home = ({}) => {
     const {animals} =useLoaderData()
     const [animalImg, setAnimalImg] = useState()
 
-    console.log(animals)
-
     let allAnimals = animals.map(
         (animalObj)=>{
              return <img src={animalObj.animalImg}/>
         }
     )
-
-    console.log(allAnimals)
-
     return(
         <main id="home">
             <div id = "allanimals">

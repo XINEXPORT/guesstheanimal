@@ -70,7 +70,7 @@ const LoginPage = () => {
 return(
     <div style={{display:page}} id="page">
         <main id="forms">
-        <section className = "form">
+        <section className = "login">
             <h1 className = "title">Login</h1>
             <label htmlFor = "log-email">Email: </label>
             <input type="text"
@@ -90,7 +90,7 @@ return(
             >Login</button>
         </section>
 
-        <section className = "form">
+        <section className = "register">
         <h1 className = "title">Register</h1>
 
             <label htmlFor = "firstname">First Name: </label>
