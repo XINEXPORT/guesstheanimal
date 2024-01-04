@@ -19,6 +19,9 @@ const getFavoriteAnimals = async (req,res) =>{
     res.json(favoriteanimal)
 }
 
+//ADD FAVORITE ANIMAL DATA
+
+
 //FETCH THE LOGGED IN USER
 const getUsers = async (req,res) =>{
     if(req.session.user){
