@@ -9,13 +9,18 @@ const LoginPage = () => {
     const navigate = useNavigate()
     const page = useSelector(state =>state.page)
 
+    //LOGIN STATE
     const [logEmail, setLogEmail] = useState('')
     const [logPassword, setLogPassword] = useState('')
-
-    const [regEmail, setRegEmail] = useState('')
-    const [regPassword, setRegPassword] = useState('')
+    //REGISTER STATE
     const [regFirstName, setRegFirstName] = useState('')
     const [regLastName, setRegLastName] = useState('')
+    const [regAddress, setRegAddress] = useState('')
+    const [regCity, setRegCity] = useState('')
+    const [regState, setRegState] = useState('')
+    const [regZipcode, setRegZipcode] = useState('')
+    const [regEmail, setRegEmail] = useState('')
+    const [regPassword, setRegPassword] = useState('')
 
     //If Login information doesn't exsist, then display error message
     const loginUser = async () =>{
@@ -42,6 +47,10 @@ const LoginPage = () => {
             const {data} = await axios.post('/api/auth/register', {
                 firstName: regFirstName,
                 lastName: regLastName,
+                address: regAddress,
+                city: regCity,
+                state: regState,
+                zipcode: regZipcode,
                 email: regEmail,
                 password: regPassword
             })
@@ -95,6 +104,30 @@ return(
                     name = "lastname"
                     placeholder = "enter your last name"
                     onChange = {(e)=> setRegLastName(e.target.value)}
+            ></input>
+            <label htmlFor = "address">Address: </label>
+            <input type="text"
+                    name = "address"
+                    placeholder = "enter your address"
+                    onChange = {(e)=> setRegAddress(e.target.value)}
+            ></input>
+            <label htmlFor = "city">City: </label>
+            <input type="text"
+                    name = "city"
+                    placeholder = "enter your city"
+                    onChange = {(e)=> setRegCity(e.target.value)}
+            ></input>
+            <label htmlFor = "state">State: </label>
+            <input type="text"
+                    name = "state"
+                    placeholder = "enter your state"
+                    onChange = {(e)=> setRegState(e.target.value)}
+            ></input>
+            <label htmlFor = "zipcode">Zipcode: </label>
+            <input type="text"
+                    name = "zipcode"
+                    placeholder = "enter your zipcode"
+                    onChange = {(e)=> setRegZipcode(e.target.value)}
             ></input>
             <label htmlFor = "reg-email">Email: </label>
             <input type="text"

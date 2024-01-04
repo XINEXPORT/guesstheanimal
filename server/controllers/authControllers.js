@@ -36,16 +36,14 @@ const checkStatus = async(req,res)=>{
 }}
 
 const register = async(req,res)=>{
-    const {firstName, lastName, email, password} = req.body
-    console.log(firstName)
-    console.log(lastName)
+    const {firstName, lastName, address, city, state, zipcode, email, password} = req.body
     if(email && password){
         let user=  await User.findOne({where: {email:email}})
         if (user){
             res.status(401).json({error: 'user exists'})
             return
         }else{
-            user= await User.create({firstName, lastName,email,password})
+            user= await User.create({firstName, lastName, address, city, state, zipcode, email,password})
             req.session.user = user.toJSON()
             let userCopy = {...user.toJSON()}
             delete userCopy.password

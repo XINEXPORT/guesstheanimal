@@ -66,6 +66,22 @@ User.init(
             type:DataTypes. STRING,
             unique:false,
         },
+        address:{
+            type:DataTypes. TEXT,
+            unique:false,
+        },
+        city:{
+            type:DataTypes. TEXT,
+            unique:false,
+        },
+        state:{
+            type:DataTypes. TEXT,
+            unique:false,
+        },
+        zipcode:{
+            type:DataTypes. STRING,
+            unique:false,
+        },
         email: {
             type:DataTypes. STRING,
             unique:true,

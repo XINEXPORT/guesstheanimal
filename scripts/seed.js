@@ -74,16 +74,49 @@ const owl = await Animal.create({
 
 })
 
-//USER SEED
-let arr = [{firstName: 'John', lastName: 'Doe',}, {firstName: 'Christopher', lastName: 'Walken'}, {firstName: 'Sean', lastName: 'Smith'}]
+//TEST USER SEED
+let arr = [{firstName: 'John', 
+            lastName: 'Doe',
+            address: '909 Main St',
+            city: 'Michigan',
+            state: 'Detroit',
+            zipcode: '48127'
+            }, 
+            {firstName: 'Christopher', 
+             lastName: 'Walken',
+             address: '2 Emu St',
+             city: 'Dallas',
+             state: 'Texas',
+             zipcode: '75052'
+            }, 
+            {firstName: 'Sean', 
+             lastName: 'Smith',
+             address: '808 Roland Ave',
+             city: 'New York City',
+             state: 'New York',
+             zipcode: '10001'
+        }]
 
 for (let i=0; i < arr.length; i++){
-    await User.create({email: `test${i}@email.com`, password:'test', firstName: arr[i].firstName, lastName: arr[i].lastName})
+    await User.create({
+        firstName: arr[i].firstName, 
+        lastName: arr[i].lastName, 
+        address: arr[i].address,
+        city: arr[i].city,
+        state: arr[i].state,
+        zipcode: arr[i].zipcode,
+        email: `test${i}@email.com`, 
+        password:'test', 
+    })
 }
 
 const christine = await User.create({
     firstName: 'Christine',
     lastName: 'Hoang',
+    address: '60 Juno Ave',
+    city: 'Dallas',
+    state: 'TX',
+    zipcode: '75001',
     email: 'christinehoangt@gmail.com',
     password: 'test',
 })
@@ -99,7 +132,6 @@ const christineFavAnimals2 = await FavoriteAnimal.create({
     animalId: '1'
 })
 
-console.log(rooster)
 console.log(cat)
 console.log(christine)
 console.log(christineFavAnimals)
