@@ -44,11 +44,10 @@ Animal.init(
 
 //USERS TABLE
 class User extends Model{
-    [util.inspect.customer](){
-        returnthis.toJSON()
+    [util.inspect.custom](){
+        return this.toJSON()
     }
 }
-
 User.init(
     {
         userId:{
@@ -101,7 +100,7 @@ User.init(
 //FAVORITE ANIMALS TABLE
 class FavoriteAnimal extends Model{
     [util.inspect.customer](){
-        returnthis.toJSON()
+        return this.toJSON()
     }
 }
 
@@ -122,11 +121,8 @@ FavoriteAnimal.init(
 );
 
 //ALWAYS MAKE SURE 'ID' IS 'Id'
-User.hasMany(FavoriteAnimal, {foreignKey: 'userId'});
-FavoriteAnimal.belongsTo(User, {foreignKey: 'userId'});
-
-Animal.hasMany(FavoriteAnimal, {foreignKey: 'animalId'});
-FavoriteAnimal.belongsTo(Animal, {foreignKey: 'animalId'});
+User.belongsToMany(Animal, {through: FavoriteAnimal, foreignKey: 'userId'});
+Animal.belongsToMany(User, {through: FavoriteAnimal, foreignKey: 'animalId'});
 
 
 if(process.argv[1]===url.fileURLToPath(import.meta.url)){

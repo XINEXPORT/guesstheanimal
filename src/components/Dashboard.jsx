@@ -6,12 +6,11 @@ import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
   const {userInfo} = useLoaderData();
-  const favAnimalData = useLoaderData();
+  const {favoriteanimals} = useLoaderData();
   const navigate = useNavigate();
 
 //HAVING ISSUES DESTRUCTURING ZIPCODE
   const MyDashboard = ({ firstName, lastName, address, city, state, zipcode, email }) => {
-    console.log(userInfo.zipcode)
     return (
       <div className='my-dashboardcard'>
         <h1 className = "rainbow rainbow_text_animated">Hello, {firstName} {lastName}</h1>
@@ -49,7 +48,7 @@ const Dashboard = () => {
       />
       <div id = "myfavoriteanimals">
         <FavoriteAnimals
-        favoriteAnimalData={favAnimalData}
+        favoriteAnimalData={favoriteanimals}
         />
       </div>
   </div>

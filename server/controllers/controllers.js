@@ -12,10 +12,13 @@ const getAnimals = async (req,res) =>{
 
 //FETCH ALL FAVORITE ANIMAL DATA
 const getFavoriteAnimals = async (req,res) =>{
-    let favoriteanimal = await FavoriteAnimal.findAll({
+    let favoriteanimal = await User.findOne({
+        where: {
+        userId: req.session.user.userId
+    },
         include: Animal,
         })
-    console.log("getFavoriteAnimals hit")
+        console.log(favoriteanimal)
     res.json(favoriteanimal)
 }
 

@@ -49,8 +49,7 @@ const router=createBrowserRouter(
         loader = {async()=>{
             let userInfo = await axios.get ('/api/user')
             let favAnimalData = await axios.get ('/api/favoriteanimals')
-            console.log(favAnimalData)
-            return {favoriteanimals:favAnimalData.data,
+            return {favoriteanimals:favAnimalData.data.animals,
                     userInfo:userInfo.data
                 }
         }}
