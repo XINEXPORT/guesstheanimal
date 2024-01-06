@@ -1,10 +1,13 @@
 import './AnimalFacts.css';
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 
 const AnimalFacts = () => {
   const { animals } = useLoaderData();
+  const loggedIn = useSelector((state) => state.loggedIn);
+
 
   const AnimalCard = ({ animalName, animalImg, animalDetails, animalId }) => {
     const [showDetails, setShowDetails] = useState(true);
@@ -40,10 +43,11 @@ const AnimalFacts = () => {
           <>
             <h1 className = "animal-name">{animalName}</h1>
             <div><img src={animalImg} alt={`Animal ${animalName}`} /></div>
-            <button className = "star" onClick={favAnimal}><img id = "staricon" src = "../public/img/star.svg"/></button>
+            {loggedIn && (
+            <button className = "star" onClick={favAnimal}>
+              <img id = "staricon" src = "../public/img/star.svg"/></button>
+              )}
           </>
-          
-        
         ) : (
           <p id="animal-details">{animalDetails}</p>
         )}
