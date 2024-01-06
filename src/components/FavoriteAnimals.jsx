@@ -3,8 +3,6 @@ import './FavoriteAnimals.css'
 
 const FavoriteAnimals = ({ favoriteAnimalData }) => {
     const [favoriteAnimals, setFavoriteAnimals] = useState([]);
-
-    console.log(favoriteAnimalData)
     
     useEffect(() => {
             const myFavList = favoriteAnimalData.map(( animal ) => (

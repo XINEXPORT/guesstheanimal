@@ -3,7 +3,6 @@ import {Animal} from '../../database/model.js'
 import { User } from '../../database/model.js'
 import {FavoriteAnimal} from '../../database/model.js'
 
-
 //FETCH ALL ANIMAL DATA
 const getAnimals = async (req,res) =>{
     let animals = await Animal.findAll()
@@ -22,8 +21,26 @@ const getFavoriteAnimals = async (req,res) =>{
     res.json(favoriteanimal)
 }
 
-//ADD FAVORITE ANIMAL DATA
-
+//STAR FAVORITE ANIMAL DATA
+const starAnimal = async (req,res) =>{
+    let {animalId} = req.body
+    let favAnimal = await FavoriteAnimal.findOne({
+        where:{
+            userId: req.session.user.userId,
+            animalId: animalId
+        }
+    })
+    if(favAnimal){
+        favAnimal.destroy()
+        res.json({isFavorite:false})
+    } else{
+        await FavoriteAnimal.create({
+            userId: req.session.user.userId,
+            animalId: animalId
+        })
+        res.json({isFavorite:true})
+    }
+}
 
 //FETCH THE LOGGED IN USER
 const getUsers = async (req,res) =>{
@@ -43,4 +60,4 @@ const getUsers = async (req,res) =>{
 // const getAnimalsAPI = async (req, res)=>{
 // }
 
-export {getAnimals, getUsers, getFavoriteAnimals}
+export {getAnimals, getUsers, getFavoriteAnimals, starAnimal}

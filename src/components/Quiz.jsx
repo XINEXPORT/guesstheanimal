@@ -8,10 +8,17 @@ const Quiz = ({q, setAnswered, setUserResponse})=>{
     const [animalImg, setAnimalImg] = useState()
     const [animalQuestion, setAnimalQuestion] = useState()
 
-    let quizArr = lodash.shuffle(q)
+    let quizArr = lodash.shuffle(lodash.uniqBy(q, 'animalId'));
+
     let btns = quizArr.map(
         (animalObj)=>{
-            return <SoundButtonLink key={animalObj.animalId} sound={animalObj.animalSound} qstn={animalObj.animalQuestion}setAnswered={setAnswered} setUserResponse={setUserResponse} animalId={animalObj.animalId}/>
+            return <SoundButtonLink 
+                key={animalObj.animalId} 
+                sound={animalObj.animalSound} 
+                qstn={animalObj.animalQuestion}
+                setAnswered={setAnswered} 
+                setUserResponse={setUserResponse} 
+                animalId={animalObj.animalId}/>
         }
     )
 

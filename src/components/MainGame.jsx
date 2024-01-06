@@ -26,7 +26,7 @@ useEffect(()=>{
     if(answered){
         let answer=quiz[0].animalId
         if(answer === userResponse){
-            setDisplay(<CorrectAnswer animals={animals} quiz={quiz} setQuiz= {setQuiz} setUserResponse={setUserResponse} setAnswered={setAnswered} setDisplay={setDisplay}/>)
+            setDisplay(<CorrectAnswer currentanswer={quiz[0]}animals={animals} quiz={quiz} setQuiz= {setQuiz} setUserResponse={setUserResponse} setAnswered={setAnswered} setDisplay={setDisplay}/>)
         } else{
             setDisplay(<IncorrectAnswer setUserResponse={setUserResponse} setAnswered={setAnswered} quiz={quiz} setDisplay={setDisplay}/>)
         }

@@ -7,9 +7,11 @@ import {useState, useEffect} from 'react';
 
 //CORRECT ANSWER PROPERTIES
 
-const CorrectAnswer =({animals, setQuiz, setAnswered, setUserResponse})=>{
+const CorrectAnswer =({animals, setQuiz, setAnswered, currentanswer, setUserResponse})=>{
 let newChoices = lodash.sampleSize(animals, 3)
-
+while (newChoices.includes(currentanswer)){
+    newChoices = lodash.sampleSize(animals, 3)
+}
 
 return(
 <main>
