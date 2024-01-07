@@ -10,6 +10,8 @@
 #myfavoriteanimals{
     display: inline-block;
     width: 100%;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
 }
 h1{
     text-align: left;
@@ -36,7 +38,7 @@ label{
     height: 500px;
     border-radius: .5rem;
     border: 3px solid rgb(0, 0, 0);
-    background-color: blanchedalmond;
+    background-color: #F1E3B7;
     padding: 5%;
 }
 .rainbow {

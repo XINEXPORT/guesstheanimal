@@ -2,16 +2,17 @@ import './AnimalFacts.css';
 import React, { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { FaStar, FaRegStar } from "react-icons/fa";
 import axios from 'axios';
 
 const AnimalFacts = () => {
   const { animals } = useLoaderData();
   const loggedIn = useSelector((state) => state.loggedIn);
 
-
   const AnimalCard = ({ animalName, animalImg, animalDetails, animalId }) => {
     const [showDetails, setShowDetails] = useState(true);
     const [backgroundColor, setBackgroundColor] = useState('#F1E3B7');
+    const[isFavorited, setIsFavorited] = useState(false);
 
     const toggleCard = (e) => {
       if(e.target.className === "star"){
@@ -23,12 +24,11 @@ const AnimalFacts = () => {
     };
 
     const favAnimal  = async () => {
-      let res = await axios.post (
-        '/api/favoriteanimals', {
+      let res = await axios.post ('/api/favoriteanimals', {
           animalId
-        }
-      )
-    }
+        });
+        setIsFavorited(true);
+    };
 
     const cardStyle = {
       background: backgroundColor,
@@ -37,24 +37,27 @@ const AnimalFacts = () => {
     };
     
     return (
-      <div className="animal-card" onClick={toggleCard} style={cardStyle} >
-
+      <div className="animal-card" onClick={toggleCard} style={cardStyle}>
         {showDetails ? (
+          //FRONT OF CARD
           <>
-            <h1 className = "animal-name">{animalName}</h1>
+            <h1 className="animal-name">{animalName}</h1>
             <div><img src={animalImg} alt={`Animal ${animalName}`} /></div>
-            {loggedIn && (
-            <button className = "star" onClick={favAnimal}>
-              <img id = "staricon" src = "../public/img/star.svg"/></button>
-              )}
+              {loggedIn && !isFavorited && (
+              <button className="star" onClick={favAnimal}>
+                <FaStar id="starclosed" className='starclosed' />
+              </button>
+            )}
           </>
         ) : (
-          <p id="animal-details">{animalDetails}</p>
+          //BACK OF CARD
+          <>
+            <p id="animal-details">{animalDetails}</p>
+          </>
         )}
       </div>
     );
   };
-
   return (
     <div id = "cardcontainer">
        {animals.map((animal, index) => (

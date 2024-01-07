@@ -37,7 +37,7 @@ const LoginPage = () => {
         alert('invalid data')
     }
     } else {
-        alert('need both email and password')
+        alert('Please enter email and password')
     }
     }
 
@@ -63,7 +63,7 @@ const LoginPage = () => {
         alert('invalid data')
         }
     } else{
-        alert('Please provide an email and password')
+        alert('Please provide your registration information')
     }
 }
 

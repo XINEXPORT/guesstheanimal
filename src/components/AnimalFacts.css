@@ -1,9 +1,10 @@
-#cardcontainer{
+#cardcontainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-.animal-card{
+  }
+  .animal-card {
+    position: relative; 
     display: inline-block;
     flex-direction: row;
     grid-gap: 20px;
@@ -17,30 +18,42 @@
     height: 500px;
     width: 300px;
     color: black;
-    font-size: x-large
-}
-.animal-card img {
+    font-size: x-large;
+  }
+  .animal-card img {
     height: 250px;
     width: 250px;
     margin: auto;
     display: block;
-}
-#animal-details{
+  }
+  #animal-details {
     display: block;
     font-weight: bold;
     justify-content: center;
     text-align: center;
-}
-.animal-name{
+  }
+  .animal-name {
     font-size: 35px;
     text-align: center;
-}
-.star{
-    width:50px;
-    height:50px;
-}
-#staricon{
-    width:30px;
-    height:30px;
-    justify-content: center;
-}
+  }
+  .star {
+    position: absolute; 
+    top: 1px; 
+    right: 6px; 
+    border: 0;
+    background-color: transparent;
+    display: flex;
+  }
+  .star:hover {
+    background-color: transparent;
+    color: red;
+  }
+  .staropen {
+    width: 40px;
+    height: 40px;
+  }
+  .starclosed {
+    width: 30px;
+    height: 30px;
+    color: blue;
+  }

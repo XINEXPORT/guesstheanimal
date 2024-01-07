@@ -78,8 +78,8 @@ const owl = await Animal.create({
 let arr = [{firstName: 'John', 
             lastName: 'Doe',
             address: '909 Main St',
-            city: 'Michigan',
-            state: 'Detroit',
+            city: 'Detroit',
+            state: 'Michigan',
             zipcode: '48127'
             }, 
             {firstName: 'Christopher', 

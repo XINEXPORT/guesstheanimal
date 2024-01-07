@@ -4,6 +4,7 @@
     border-radius: .5rem;
     margin: auto;
     padding: 6px;
+    margin-top: 10px;;
     display: block;
 }
 audio::-webkit-media-controls-panel {
@@ -18,4 +19,5 @@ audio::-webkit-media-controls-panel {
     align-items: flex-end;
     justify-content: center;
     padding: 3rem;
+
   }
