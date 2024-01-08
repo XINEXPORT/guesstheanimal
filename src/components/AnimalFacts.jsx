@@ -8,26 +8,25 @@ import axios from 'axios';
 const AnimalFacts = () => {
   const { animals } = useLoaderData();
   const loggedIn = useSelector((state) => state.loggedIn);
+  console.log(animals);
 
-  const AnimalCard = ({ animalName, animalImg, animalDetails, animalId }) => {
+  const AnimalCard = ({ animalName, animalImg, animalDetails, animalId, users }) => {
+    let initialFavorite = loggedIn? users.length : false
     const [showDetails, setShowDetails] = useState(true);
     const [backgroundColor, setBackgroundColor] = useState('#F1E3B7');
-    const[isFavorited, setIsFavorited] = useState(false);
+    const [isFavorited, setIsFavorited] = useState(initialFavorite);
 
     const toggleCard = (e) => {
-      if(e.target.className === "star"){
-        return
-      }else{
         setShowDetails(!showDetails);
         setBackgroundColor(backgroundColor === '#ffc0cb' ? 'pink' : '#ffc0cb');
-      }
     };
 
-    const favAnimal  = async () => {
+    const favAnimal  = async (e) => {
+      e.stopPropagation()
       let res = await axios.post ('/api/favoriteanimals', {
           animalId
         });
-        setIsFavorited(true);
+        setIsFavorited(res.data.isFavorite);
     };
 
     const cardStyle = {
@@ -43,11 +42,14 @@ const AnimalFacts = () => {
           <>
             <h1 className="animal-name">{animalName}</h1>
             <div><img src={animalImg} alt={`Animal ${animalName}`} /></div>
-              {loggedIn && !isFavorited && (
+              {loggedIn && !isFavorited ? (
               <button className="star" onClick={favAnimal}>
-                <FaStar id="starclosed" className='starclosed' />
+                <FaRegStar id="staropen" className='staropen' />
               </button>
-            )}
+            ):(              
+            <button className="star" onClick={favAnimal}>
+            <FaStar id="starclosed" className='starclosed' />
+          </button>)}
           </>
         ) : (
           //BACK OF CARD
@@ -67,6 +69,7 @@ const AnimalFacts = () => {
            animalName={animal.animalName}
            animalImg={animal.animalImg}
            animalDetails={animal.animalDetails}
+           users = {animal.users}
          />
        ))}
      </div>

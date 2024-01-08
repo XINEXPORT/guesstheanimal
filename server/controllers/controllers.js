@@ -5,8 +5,13 @@ import {FavoriteAnimal} from '../../database/model.js'
 
 //FETCH ALL ANIMAL DATA
 const getAnimals = async (req,res) =>{
-    let animals = await Animal.findAll()
-    res.json(animals)
+    if(req.session.user){
+        let animals = await Animal.findAll({include:User})
+        res.json(animals)
+    }else{
+        let animals = await Animal.findAll()
+        res.json(animals)
+    }
 }
 
 //FETCH ALL FAVORITE ANIMAL DATA
