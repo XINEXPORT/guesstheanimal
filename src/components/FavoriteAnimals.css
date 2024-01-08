@@ -1,7 +1,6 @@
 #myfavanimals{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    width: 700px;
+    height: 930px;
 }
 #myfavlist{
     color: black;
@@ -16,6 +15,7 @@
     display: flex;
     justify-content: center;
     padding: 3em;
+    flex-wrap: wrap;
 }
 h1{
     text-align: center;
@@ -28,6 +28,11 @@ img{
 }
 .favAnimalName{
     font-size: x-large;
+}
+#addanimals{
+    height: 50px;
+    justify-content: center;
+    margin-bottom: 20%;
 }
 .rainbow {
     text-align: center;
@@ -49,7 +54,6 @@ img{
     0%,100% {
         background-position: 0 0;
     }
-
     50% {
         background-position: 100% 0;
     }

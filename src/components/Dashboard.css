@@ -5,13 +5,11 @@
 #mydashboard{
     display: flex;
     align-items: center;
-    margin-right: 50%;
+    margin-right: 10%;
 }
 #myfavoriteanimals{
-    display: inline-block;
-    width: 100%;
-    flex-wrap: wrap;
-    flex-direction: row-reverse;
+    margin-bottom: 20%;
+    height: 500px;
 }
 h1{
     text-align: left;
@@ -20,31 +18,34 @@ h1{
 #contact-info{
     text-decoration: underline;
     font-weight: bold;
-    font-size: 20px;
+    font-size: x-large;
     padding-bottom: 20px;
 }
 .form{
-    padding: 8px;
+    padding: 12px;
     margin-right: 2%;
+    font-size: x-large;
 }
 label{
     font-weight: bold;
+    font-size: x-large;
 }
 .my-dashboardcard{
     margin: 10%;
     margin-bottom: 20%;
     color: black;
-    max-width: 500px;
-    height: 500px;
+    max-width: auto;
+    max-height: auto;
     border-radius: .5rem;
     border: 3px solid rgb(0, 0, 0);
     background-color: #F1E3B7;
-    padding: 5%;
+    padding: 1%;
+    padding-bottom: 5%;
 }
 .rainbow {
     text-align: center;
     text-decoration: underline;
-    font-size: 35px;
+    font-size: 20px;
     letter-spacing: 5px;
 }
 .rainbow_text_animated {

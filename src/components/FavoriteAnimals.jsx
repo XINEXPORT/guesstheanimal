@@ -1,7 +1,12 @@
 import { useState, useEffect } from 'react'
 import './FavoriteAnimals.css'
+import AnimalFacts from './AnimalFacts.jsx';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 
 const FavoriteAnimals = ({ favoriteAnimalData }) => {
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
     const [favoriteAnimals, setFavoriteAnimals] = useState([]);
     
     useEffect(() => {
@@ -16,10 +21,16 @@ const FavoriteAnimals = ({ favoriteAnimalData }) => {
 
     return (
         <div id="myfavanimals">
+            <div id="myfavlist">
             <h1 className="rainbow rainbow_text_animated">My Favorite Animals</h1>
-            <div id="myfavlist">{favoriteAnimals}</div>
+            {favoriteAnimals}
+            </div>
+            <button onClick={()=>{
+                navigate("/animalflashcards")
+            }} id="addanimals" style={{backgroundColor: 'blue', color: 'white' }}>Add Animals</button>
         </div>
     );
 }
 
 export default FavoriteAnimals;
+
