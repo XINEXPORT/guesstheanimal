@@ -8,6 +8,7 @@ import AnimalFacts from './components/AnimalFacts.jsx';
 import LoginPage from './components/LoginPage.jsx';
 import Dashboard from './components/Dashboard.jsx';
 import FavoriteAnimals from './components/FavoriteAnimals.jsx';
+import FinishQuiz from './components/FinishQuiz.jsx';
 
 
 //PAGE ROUTES
@@ -33,6 +34,15 @@ const router=createBrowserRouter(
             //this is what use loaderdata returns for MainGame
         }}
     />
+    <Route
+//FINISH QUIZ VIEW
+        path = "/finishquiz"
+        element = {<FinishQuiz/>}
+        loader = {async()=>{
+            let res = await axios.get('/api/animal')
+            return {animals:res.data}
+        }}
+    />
 <Route
 //ANIMAL FACTS PAGE
         path = "/animalflashcards"
@@ -44,6 +54,7 @@ const router=createBrowserRouter(
 />
 <Route
 //MY DASHBOARD
+//FAVORITE ANIMALS VIEW
         path = "/dashboard"
         element={<Dashboard/>}
         loader = {async()=>{

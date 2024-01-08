@@ -1,0 +1,19 @@
+.finished{
+    font-size: 100px;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
+#finalanimals{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#fireworks{
+    width: 100%;
+    height: 100%;
+    max-width: auto;
+    max-height: auto;
+    margin:1px;
+}
