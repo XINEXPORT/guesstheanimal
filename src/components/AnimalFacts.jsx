@@ -8,7 +8,7 @@ import axios from 'axios';
 const AnimalFacts = () => {
   const { animals } = useLoaderData();
   const loggedIn = useSelector((state) => state.loggedIn);
-
+console.log(animals)
 
   const AnimalCard = ({ animalName, animalImg, animalDetails, animalId, users }) => {
     let initialFavorite = loggedIn? users.length : false

@@ -6,7 +6,11 @@ import {FavoriteAnimal} from '../../database/model.js'
 //FETCH ALL ANIMAL DATA
 const getAnimals = async (req,res) =>{
     if(req.session.user){
-        let animals = await Animal.findAll({include:User})
+        let animals = await Animal.findAll({include:{
+            model: User, 
+            where: {userId: req.session.user.userId},
+            required: false,
+        }})
         res.json(animals)
     }else{
         let animals = await Animal.findAll()

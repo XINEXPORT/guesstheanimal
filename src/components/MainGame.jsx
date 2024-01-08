@@ -31,7 +31,6 @@ useEffect(()=>{
         let answer=quiz[0].animalId
         if(answer === userResponse){
             setCorrectAnswerCount(correctAnswerCount+1)
-           
             //this where the gamecount state will increase
             //if the gamecount is less than 3, set display to correct answer, otherwise set to finished component
             // setDisplay(<FinishQuiz/>)
