@@ -8,7 +8,7 @@ import axios from 'axios';
 const AnimalFacts = () => {
   const { animals } = useLoaderData();
   const loggedIn = useSelector((state) => state.loggedIn);
-  console.log(animals);
+
 
   const AnimalCard = ({ animalName, animalImg, animalDetails, animalId, users }) => {
     let initialFavorite = loggedIn? users.length : false
@@ -39,17 +39,18 @@ const AnimalFacts = () => {
       <div className="animal-card" onClick={toggleCard} style={cardStyle}>
         {showDetails ? (
           //FRONT OF CARD
+          //THE LOGGEDIN ? & ISFAVORITED? IS A NESTED TERNARY
           <>
             <h1 className="animal-name">{animalName}</h1>
             <div><img src={animalImg} alt={`Animal ${animalName}`} /></div>
-              {loggedIn && !isFavorited ? (
+              {loggedIn ? !isFavorited ? (
               <button className="star" onClick={favAnimal}>
                 <FaRegStar id="staropen" className='staropen' />
               </button>
             ):(              
             <button className="star" onClick={favAnimal}>
             <FaStar id="starclosed" className='starclosed' />
-          </button>)}
+          </button>) : <></>}
           </>
         ) : (
           //BACK OF CARD

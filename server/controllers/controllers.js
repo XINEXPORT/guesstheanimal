@@ -31,7 +31,7 @@ const starAnimal = async (req,res) =>{
     let {animalId} = req.body
     let favAnimal = await FavoriteAnimal.findOne({
         where:{
-            // userId: req.session.user.userId,
+            userId: req.session.user.userId,
             animalId: animalId
         }
     })

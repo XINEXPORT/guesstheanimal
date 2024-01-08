@@ -52,7 +52,7 @@
   }
   .star:hover {
     background-color: transparent;
-    color: red;
+    color: yellow;
   }
   .staropen {
     width: 40px;

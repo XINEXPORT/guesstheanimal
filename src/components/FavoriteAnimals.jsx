@@ -8,6 +8,8 @@ const FavoriteAnimals = ({ favoriteAnimalData }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [favoriteAnimals, setFavoriteAnimals] = useState([]);
+
+    console.log(favoriteAnimalData)
     
     useEffect(() => {
             const myFavList = favoriteAnimalData.map(( animal ) => (
@@ -33,4 +35,3 @@ const FavoriteAnimals = ({ favoriteAnimalData }) => {
 }
 
 export default FavoriteAnimals;
-
