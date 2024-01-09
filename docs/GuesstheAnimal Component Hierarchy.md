@@ -6,16 +6,17 @@
      - QuizForm
      - SoundButtons
    - CorrectAnswer
-    - PlayAgainButton
+     - PlayAgainButton
    - IncorrectAnswer
-    - BackButton
+     - BackButton
    - FinishQuiz
 - Animal Facts
 - Dashboard
   - MyDashboard
     - EditContactInfoCells
+    - Edit/SaveButtons
   - FavoriteAnimals
-- LoginPage
+- Login/RegistrationPage
 
 
 
