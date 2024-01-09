@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import './FavoriteAnimals.css'
-import AnimalFacts from './AnimalFacts.jsx';
+import AnimalFacts from '../AnimalFlashCards/AnimalFacts.jsx';
 import { useSelector, useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 

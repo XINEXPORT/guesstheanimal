@@ -1,12 +1,12 @@
 import {Route, createBrowserRouter, createRoutesFromElements} from 'react-router-dom';
 import App from './App.jsx'
-import Home from './components/Home.jsx'
-import MainGame from './components/MainGame.jsx'
+import Home from './components/Index/Home.jsx'
+import MainGame from './components/Game/MainGame.jsx'
 import axios from 'axios';
-import AnimalFacts from './components/AnimalFacts.jsx';
-import LoginPage from './components/LoginPage.jsx';
-import Dashboard from './components/Dashboard.jsx';
-import FinishQuiz from './components/FinishQuiz.jsx';
+import AnimalFacts from './components/AnimalFlashCards/AnimalFacts.jsx';
+import LoginPage from './components/Login/LoginPage.jsx';
+import Dashboard from './components/Dashboard/Dashboard.jsx';
+import FinishQuiz from './components/Game/FinishQuiz.jsx';
 
 
 //PAGE ROUTES

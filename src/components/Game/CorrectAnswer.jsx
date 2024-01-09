@@ -1,6 +1,6 @@
 import './CorrectAnswer.css';
 import Quiz from './Quiz.jsx';
-import MainGame from "./MainGame"
+import MainGame from "./MainGame.jsx"
 import IncorrectAnswer  from './IncorrectAnswer.jsx';
 import lodash from 'lodash';
 import {useState, useEffect} from 'react';

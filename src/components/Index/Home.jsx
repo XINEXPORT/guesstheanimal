@@ -1,4 +1,4 @@
-import '../index.css';
+import './Home.css';
 import {useState} from 'react'
 import { useLoaderData } from 'react-router-dom';
 

@@ -1,5 +1,5 @@
 import "./App.css"
-import Header from "./components/Header.jsx"
+import Header from "./components/Index/Header.jsx"
 import { Outlet, Link} from "react-router-dom"
 
 const App=() =>{

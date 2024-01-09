@@ -1,4 +1,4 @@
-import MainGame from "./MainGame"
+import MainGame from "./MainGame.jsx"
 import './IncorrectAnswer.css';
 import {Link} from 'react-router-dom'
 import Quiz from './Quiz.jsx';

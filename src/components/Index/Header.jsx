@@ -2,7 +2,7 @@ import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import LoginPage from './LoginPage.jsx';
+import LoginPage from '../Login/LoginPage.jsx';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 

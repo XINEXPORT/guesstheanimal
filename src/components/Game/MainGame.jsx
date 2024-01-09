@@ -1,4 +1,4 @@
-import '../index.css';
+import './MainGame.css';
 import Quiz from './Quiz.jsx';
 import {useState, useEffect} from 'react';
 import lodash from 'lodash';
