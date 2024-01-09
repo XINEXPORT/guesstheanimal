@@ -1,34 +1,26 @@
 import './Dashboard.css';
 import FavoriteAnimals from './FavoriteAnimals.jsx';
+import EditContactInfoCells from'./EditContactInfoCells.jsx';
+import MyDashboard from './MyDashboard.jsx';
+import axios from 'axios';
 import React from 'react';
-import {useEffect} from 'react'
+import {useState, useEffect} from 'react'
 import { useLoaderData, useNavigate } from 'react-router-dom';
 
 const Dashboard = () => {
   const {userInfo} = useLoaderData();
   const {favoriteanimals} = useLoaderData();
   const navigate = useNavigate();
+  const [address, setAddress]=useState(userInfo.address)
+  const [city, setCity]=useState(userInfo.city)
+  const [state, setState]=useState(userInfo.state)
+  const [zipcode, setZipcode]=useState(userInfo.zipcode)
+  const [email, setEmail]=useState(userInfo.email)
 
-//HAVING ISSUES DESTRUCTURING ZIPCODE
-  const MyDashboard = ({ firstName, lastName, address, city, state, zipcode, email }) => {
-    return (
-      <div className='my-dashboardcard'>
-        <h1 className = "rainbow rainbow_text_animated">Hello, {firstName} {lastName}</h1>
-        <p id = "contact-info">Contact Information</p>
-        <label htmlFor = "address" > Address: </label>
-        <div className = "form">{address}</div>
-        <label htmlFor = "city" > City: </label>
-        <div className = "form">{city}</div>
-        <label htmlFor = "state" > State: </label>
-        <div className = "form">{state}</div>
-        <label htmlFor = "zipcode" > Zipcode: </label>
-        <div className = "form">{userInfo.zipcode}</div>
-        <label htmlFor = "emailaddress" > Email Address: </label>
-        <div className = "form">{email}</div>
-      </div>
-    );
-  };
 
+//create a !isEditing state to return the my-dashboardcard view, else return the editing state
+//create buttons on the dashboard, delete EditContactInfoButtons component
+  
   useEffect(()=>{
     if(userInfo.error){
       navigate("/login")
@@ -38,20 +30,26 @@ const Dashboard = () => {
     return(
     <div id="mydashboard">
       <MyDashboard
+        userId={userInfo.userId}
         firstName={userInfo.firstName}
         lastName={userInfo.lastName}
-        address={userInfo.address}
-        city={userInfo.city}
-        state={userInfo.state}
-        zip={userInfo.zipcode}
-        email={userInfo.email}
+        address={address}
+        setAddress={setAddress}
+        city={city}
+        setCity={setCity}
+        state={state}
+        setState={setState}
+        zipcode={zipcode}
+        setZipcode={setZipcode}
+        email={email}
+        setEmail={setEmail}
       />
       <div id = "myfavoriteanimals">
         <FavoriteAnimals
         favoriteAnimalData={favoriteanimals}
         />
       </div>
-  </div>
+    </div>
   
     );
 };

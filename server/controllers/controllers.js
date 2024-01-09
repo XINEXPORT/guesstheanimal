@@ -65,8 +65,18 @@ const getUsers = async (req,res) =>{
     }  
 }
 
-//FETCH ALL ANIMAL API DATA
-// const getAnimalsAPI = async (req, res)=>{
-// }
+//EDIT CONTACT INFO
+const updateContact = async (req,res) =>{
+    const {id} = req.params
+    const {address, city, state, zipcode, email} = req.body
+    const user = await User.findByPk(+id)
+        user.address = address || user.address
+        user.city = city || user.city
+        user.state = state || user.state
+        user.zipcode = zipcode || user.zipcode
+        user.email = email || user.email
+        user.save()
+        res.json(user)
+}
 
-export {getAnimals, getUsers, getFavoriteAnimals, starAnimal}
+export {getAnimals, getUsers, getFavoriteAnimals, starAnimal, updateContact}

@@ -9,6 +9,8 @@
     - NextButton
   - IncorrectAnswer
     - BackButton
+- Animal Facts
+- Dashboard
 
 
 

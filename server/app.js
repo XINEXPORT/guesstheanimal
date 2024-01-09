@@ -2,7 +2,7 @@ import ViteExpress from 'vite-express';
 import morgan from 'morgan';
 import express from 'express';
 import session from 'express-session';
-import { getAnimals, getUsers, getFavoriteAnimals, starAnimal } from './controllers/controllers.js';
+import { getAnimals, getUsers, getFavoriteAnimals, starAnimal, updateContact } from './controllers/controllers.js';
 import {
   login,
   logout,
@@ -31,14 +31,15 @@ app.post('/api/auth/login', login);
 app.post('/api/auth/logout', logout);
 app.post('/api/auth/register', register);
 
-//ANIMAL ENDPOINT
+//ANIMAL ENDPOINTS
 app.get('/api/animal', getAnimals);
 
-//FAVORITE ANIMALS ENDPOINT
+//FAVORITE ANIMALS ENDPOINTS
 app.get('/api/favoriteanimals', getFavoriteAnimals);
 app.post('/api/favoriteanimals', starAnimal);
 
-//USERS ENDPOINT
+//USERS ENDPOINTS
 app.get('/api/user', getUsers);
+app.put('/api/user/:id', updateContact);
 
 ViteExpress.listen(app, port, () => console.log(`Server is listening on http://localhost:${port}`));
