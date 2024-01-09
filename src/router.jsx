@@ -2,14 +2,12 @@ import {Route, createBrowserRouter, createRoutesFromElements} from 'react-router
 import App from './App.jsx'
 import Home from './components/Home.jsx'
 import MainGame from './components/MainGame.jsx'
-import Quiz from './components/Quiz.jsx'
 import axios from 'axios';
 import AnimalFacts from './components/AnimalFacts.jsx';
 import LoginPage from './components/LoginPage.jsx';
 import Dashboard from './components/Dashboard.jsx';
-import FavoriteAnimals from './components/FavoriteAnimals.jsx';
 import FinishQuiz from './components/FinishQuiz.jsx';
-import EditContactInfoCells from './components/EditContactInfoCells.jsx';
+
 
 //PAGE ROUTES
 const router=createBrowserRouter(
@@ -59,10 +57,16 @@ const router=createBrowserRouter(
         element={<Dashboard/>}
         loader = {async()=>{
             let userInfo = await axios.get ('/api/user')
-            let favAnimalData = await axios.get ('/api/favoriteanimals')
-            return {favoriteanimals:favAnimalData.data.animals,
-                    userInfo:userInfo.data
-                }
+            if(userInfo.data.error){
+                return {userInfo:userInfo.data}
+            } else {
+                let favAnimalData = await axios.get ('/api/favoriteanimals')
+    
+                return {
+                        favoriteanimals:favAnimalData.data.animals,
+                        userInfo:userInfo.data
+                    }
+            }
         }}
 />
 <Route

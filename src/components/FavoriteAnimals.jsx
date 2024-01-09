@@ -26,10 +26,10 @@ const FavoriteAnimals = ({ favoriteAnimalData }) => {
             <div id="myfavlist">
             <h1 className="rainbow rainbow_text_animated">My Favorite Animals</h1>
             {favoriteAnimals}
-            </div>
             <button onClick={()=>{
                 navigate("/animalflashcards")
-            }} id="addanimals" style={{backgroundColor: 'blue', color: 'white' }}>Add Animals</button>
+            }} id="addanimals" style={{}}>Add Animals</button>
+            </div>
         </div>
     );
 }

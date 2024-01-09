@@ -17,7 +17,6 @@ const Dashboard = () => {
   const [zipcode, setZipcode]=useState(userInfo.zipcode)
   const [email, setEmail]=useState(userInfo.email)
 
-
   useEffect(()=>{
     if(userInfo.error){
       navigate("/login")
