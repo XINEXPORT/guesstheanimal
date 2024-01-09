@@ -1,12 +1,12 @@
 import './Dashboard.css';
 import FavoriteAnimals from './FavoriteAnimals.jsx';
-import EditContactInfoCells from'./EditContactInfoCells.jsx';
 import MyDashboard from './MyDashboard.jsx';
 import axios from 'axios';
 import React from 'react';
 import {useState, useEffect} from 'react'
 import { useLoaderData, useNavigate } from 'react-router-dom';
 
+//MY DASHBOARD IS THE INITIAL STATE VIEW OF USER'S DASHBOARD
 const Dashboard = () => {
   const {userInfo} = useLoaderData();
   const {favoriteanimals} = useLoaderData();
@@ -18,9 +18,6 @@ const Dashboard = () => {
   const [email, setEmail]=useState(userInfo.email)
 
 
-//create a !isEditing state to return the my-dashboardcard view, else return the editing state
-//create buttons on the dashboard, delete EditContactInfoButtons component
-  
   useEffect(()=>{
     if(userInfo.error){
       navigate("/login")
