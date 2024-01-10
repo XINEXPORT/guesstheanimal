@@ -16,6 +16,9 @@ const Dashboard = () => {
   const [state, setState]=useState(userInfo.state)
   const [zipcode, setZipcode]=useState(userInfo.zipcode)
   const [email, setEmail]=useState(userInfo.email)
+  const [image, setImage]=useState(userInfo.image)
+
+  console.log(userInfo)
 
   useEffect(()=>{
     if(userInfo.error){
@@ -39,6 +42,8 @@ const Dashboard = () => {
         setZipcode={setZipcode}
         email={email}
         setEmail={setEmail}
+        image = {image}
+        setImage = {setImage}
       />
       <div id = "myfavoriteanimals">
         <FavoriteAnimals

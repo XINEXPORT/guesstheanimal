@@ -19,13 +19,15 @@ import {
 
 const app = express();
 const port = '8000';
-
+//STATIC IMAGES FOLDER
+app.use('../public/profileimg', express.static('./public/profileimg'))
 app.use(morgan('dev'));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(
   session({ secret: 'this is a secret', saveUninitialized: true, resave: false })
   // this line was added for login functionality
+  
 );
 
 ViteExpress.config({ printViteDevServerHost: true });
@@ -51,5 +53,3 @@ app.put('/api/user/:id', upload, updateContact);
 
 ViteExpress.listen(app, port, () => console.log(`Server is listening on http://localhost:${port}`));
 
-//STATIC IMAGES FOLDER
-app.use('../public/profileimg', express.static('./public/profileimg'))

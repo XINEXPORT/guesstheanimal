@@ -49,21 +49,21 @@ const elephant = await Animal.create({
     animalImg:'../public/img/elephant.png',
     animalSound: '../public/audio/elephant.wav',
     animalQuestion:'What sound does a Elephant make?',
-    animalDetails:'Elephant facts'
+    animalDetails:'Elephant are the largest mammals that live on land and are known for their gentle attitude and intelligence.'
 })
 const lion = await Animal.create({
     animalName:'Lion',
     animalImg:'../public/img/lion.png',
     animalSound: '../public/audio/lion.wav',
     animalQuestion:'What sound does a Lion make?',
-    animalDetails:'Lion facts'
+    animalDetails:'Often known as the "king of the jungle", most lions actually live in the savannah or grasslands. Just one population of wild forest-dwelling lions remains, in Gir Forest National Park, India.'
 })
 const owl = await Animal.create({
     animalName:'Owl',
     animalImg:'../public/img/owl.png',
     animalSound:'../public/audio/owl.mp3',
     animalQuestion:'What sound does a Owl make?',
-    animalDetails:'Owls are farsighted, meaning they can’t see things close to their eyes clearly.'
+    animalDetails:'Owls are farsighted, meaning they cannot see things close to their eyes clearly.'
 
 })
 const monkey = await Animal.create({
@@ -71,7 +71,7 @@ const monkey = await Animal.create({
     animalImg:'../public/img/monkey.png',
     animalSound:'../public/audio/chimpanzee.mp3',
     animalQuestion:'What sound does a Monkey make?',
-    animalDetails:'Monkey Facts'
+    animalDetails:'Monkeys are clever, social animals. They are known for running and leaping through trees with ease. Like apes and humans, monkeys belong to the group of mammals called primates.'
 
 })
 const bear = await Animal.create({
@@ -79,7 +79,7 @@ const bear = await Animal.create({
     animalImg:'../public/img/bear.png',
     animalSound:'../public/audio/bear.mp3',
     animalQuestion:'What sound does a Bear make?',
-    animalDetails:'Bear Facts'
+    animalDetails:'American Black Bears are found in North America, Canada and Mexico. They may be called black bears, but their coat can be blue-gray or blue-black, brown and sometimes white!'
 
 })
 const snake = await Animal.create({
@@ -87,7 +87,7 @@ const snake = await Animal.create({
     animalImg:'../public/img/snake.png',
     animalSound:'../public/audio/snake.mp3',
     animalQuestion:'What sound does a Snake make?',
-    animalDetails:'Snake Facts'
+    animalDetails:'Snakes do not have external ears to hear sound waves in the air. Instead, bones in their lower jaw pick up vibrations in the ground or water. The vibes trigger signals in the snakes brain, which are received as messages.'
 
 })
 const horse = await Animal.create({
@@ -95,7 +95,7 @@ const horse = await Animal.create({
     animalImg:'../public/img/horse.png',
     animalSound:'../public/audio/horse.mp3',
     animalQuestion:'What sound does a Horse make?',
-    animalDetails:'Horse Facts'
+    animalDetails:'A horse’s eyes are amazing! Horses can almost see what is going on all the way around their body! This is because their eyes are near the side of their head!'
 
 })
 
