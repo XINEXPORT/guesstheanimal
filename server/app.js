@@ -2,7 +2,14 @@ import ViteExpress from 'vite-express';
 import morgan from 'morgan';
 import express from 'express';
 import session from 'express-session';
-import { getAnimals, getUsers, getFavoriteAnimals, starAnimal, updateContact } from './controllers/controllers.js';
+import { 
+  getAnimals, 
+  getUsers, 
+  getFavoriteAnimals, 
+  starAnimal, 
+  updateContact, 
+  upload 
+} from './controllers/controllers.js';
 import {
   login,
   logout,
@@ -40,6 +47,9 @@ app.post('/api/favoriteanimals', starAnimal);
 
 //USERS ENDPOINTS
 app.get('/api/user', getUsers);
-app.put('/api/user/:id', updateContact);
+app.put('/api/user/:id', upload, updateContact);
 
 ViteExpress.listen(app, port, () => console.log(`Server is listening on http://localhost:${port}`));
+
+//STATIC IMAGES FOLDER
+app.use('../public/profileimg', express.static('./public/profileimg'))

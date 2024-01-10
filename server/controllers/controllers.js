@@ -2,6 +2,8 @@
 import {Animal} from '../../database/model.js'
 import { User } from '../../database/model.js'
 import {FavoriteAnimal} from '../../database/model.js'
+import multer from 'multer'
+import path from 'path'
 
 //FETCH ALL ANIMAL DATA
 const getAnimals = async (req,res) =>{
@@ -68,15 +70,46 @@ const getUsers = async (req,res) =>{
 //EDIT CONTACT INFO
 const updateContact = async (req,res) =>{
     const {id} = req.params
-    const {address, city, state, zipcode, email} = req.body
+    const {address, city, state, zipcode, email, image} = req.body
     const user = await User.findByPk(+id)
         user.address = address || user.address
         user.city = city || user.city
         user.state = state || user.state
         user.zipcode = zipcode || user.zipcode
         user.email = email || user.email
+        user.image = req.file.path
         user.save()
         res.json(user)
 }
 
-export {getAnimals, getUsers, getFavoriteAnimals, starAnimal, updateContact}
+//IMAGE CONTROLLER
+
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'public/profileimg');
+    },
+    filename: (req, file, cb) => {
+        cb(null, Date.now() + path.extname(file.originalname))
+    }
+});
+
+const upload = multer({
+    storage: storage,
+    limits: {fileSize: '1000000'},
+    fileFilter: (req, file, cb) =>{
+        const fileType = /jpeg|jpg|png|gif|/
+        const mimetype =fileType.test(file.mimetype)
+        const extname = fileType.test(path.extname(file.originalname))
+
+        if(mimetype && extname){
+            return cb(null, true)
+        }
+        cb ('Provide proper file format to upload')
+    }
+}).single('image')
+//.single is 1 photo
+//.array('images',3) can let you upload 3 images
+
+
+
+export {getAnimals, getUsers, getFavoriteAnimals, starAnimal, updateContact, upload}

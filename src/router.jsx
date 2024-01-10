@@ -8,7 +8,6 @@ import LoginPage from './components/Login/LoginPage.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
 import FinishQuiz from './components/Game/FinishQuiz.jsx';
 
-
 //PAGE ROUTES
 const router=createBrowserRouter(
     createRoutesFromElements(

@@ -89,8 +89,11 @@ User.init(
         password: {
             type:DataTypes. STRING,
             allowNull:false,
-    }
-},
+        },
+        image: {
+            type:DataTypes. STRING,
+        }
+    },
 {
     modelName:'user',
     sequelize:db
