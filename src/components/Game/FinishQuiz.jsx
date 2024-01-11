@@ -19,9 +19,9 @@ const FinishQuiz = () => {
         <main id="home">
             <div id = "finalanimals">
             <h1 className = "finished">Finished!</h1>
-            <button onClick={()=>{navigate("/animalflashcards")}} id="animalflashcards" style={{}}>Continue to Animal Flash Cards</button>
+            <button onClick={()=>{navigate("/animalflashcards")}} id="contanimalflashcards" style={{}}>Continue to Animal Flash Cards</button>
             <Confetti/>
-           {allAnimals}
+           {/* {allAnimals} */}
             </div>
         </main>
     )

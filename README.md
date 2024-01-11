@@ -15,3 +15,7 @@ Execute the following command:
 Then Run Dev Environment <br>
 Execute the following command:
 - npm run dev
+
+
+# Resources
+https://www.youtube.com/watch?v=sVYrH166LXM&ab_channel=GreatAdib

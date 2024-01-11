@@ -1,8 +1,16 @@
+#home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
 .finished{
     font-size: 100px;
     color: black;
     display: flex;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 #finalanimals{
     display: flex;
@@ -10,6 +18,9 @@
     align-items: center;
     justify-content: center;
 }
-#animalflashcards{
-    
+#contanimalflashcards{ 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }

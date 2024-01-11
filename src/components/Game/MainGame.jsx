@@ -13,6 +13,8 @@ const MainGame = ()=>{
     const {animals} =useLoaderData()
     let choices = lodash.sampleSize(animals, 3)
 
+    console.log(choices)
+
     //QUIZ STATE
     const [quiz,setQuiz]=useState(choices);
     //IS GAME ANSWERED STATE
@@ -24,6 +26,8 @@ const MainGame = ()=>{
     const [display,setDisplay]=useState(<Quiz q={quiz} setAnswered={setAnswered} setUserResponse={setUserResponse}/>)
     //CORRECT ANSWER COUNT STATE
     const [correctAnswerCount,setCorrectAnswerCount]=useState(0);
+    //ANIMAL ARR
+    const [animalArr, setAnimalArr]=useState(animals)
 
 
 useEffect(()=>{
@@ -31,14 +35,18 @@ useEffect(()=>{
         let answer=quiz[0].animalId
         if(answer === userResponse){
             setCorrectAnswerCount(correctAnswerCount+1)
-            //this where the gamecount state will increase
-            //if the gamecount is less than 3, set display to correct answer, otherwise set to finished component
+            //this is where the gamecount state will increase
+            //if the gamecount is less than num, set display to correct answer, otherwise set to finished component
             // setDisplay(<FinishQuiz/>)
-            if(correctAnswerCount < 1){
+            if(correctAnswerCount < 4){
+
+                let arrCopy = [...animalArr]
+                arrCopy = arrCopy.filter(animal=>animal!==quiz[0])
+                setAnimalArr(arrCopy)
+                
                 setDisplay(
                     <CorrectAnswer 
-                        currentanswer={quiz[0]}
-                        animals={animals} 
+                        animals={animalArr} 
                         quiz={quiz} 
                         setQuiz= {setQuiz} 
                         setUserResponse={setUserResponse} 

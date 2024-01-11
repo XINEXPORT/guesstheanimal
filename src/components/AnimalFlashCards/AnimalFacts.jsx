@@ -34,6 +34,10 @@ console.log(animals)
       width: '300px', 
       height: showDetails ? '500px' : '500px'
     };
+
+    // const animalDetailsLi = [];
+    // for (let detail of animalDetails){
+    //   animalDetailsLi.push(<p key={detail}>{detail}: {animalDetails[detail]}</p>); }
     
     return (
       <div className="animal-card" onClick={toggleCard} style={cardStyle}>
