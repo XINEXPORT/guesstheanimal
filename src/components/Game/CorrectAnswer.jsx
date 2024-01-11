@@ -6,9 +6,7 @@ import lodash from 'lodash';
 import {useState, useEffect} from 'react';
 
 //CORRECT ANSWER PROPERTIES
-
 const CorrectAnswer =({animals, setQuiz, setAnswered,  setUserResponse})=>{
-
 let newChoices = lodash.sampleSize(animals, 3)
 
 return(

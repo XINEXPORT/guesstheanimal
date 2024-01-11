@@ -39,7 +39,9 @@ useEffect(()=>{
             //if the gamecount is less than num, set display to correct answer, otherwise set to finished component
             // setDisplay(<FinishQuiz/>)
             if(correctAnswerCount < 4){
-
+            
+            //Make a copy of the animal array and filter out the correct answer
+            //then set the new animal array to the filtered copy
                 let arrCopy = [...animalArr]
                 arrCopy = arrCopy.filter(animal=>animal!==quiz[0])
                 setAnimalArr(arrCopy)

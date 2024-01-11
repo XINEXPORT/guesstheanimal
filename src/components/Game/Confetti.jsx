@@ -22,7 +22,7 @@ const Confetti = () => {
             height = {windowDimension.height}
             tweenDuration={5000}
             numberOfPieces = {1000}
-            gravity = {0.2}
+            gravity = {0.3}
             />
         </div>
     )
