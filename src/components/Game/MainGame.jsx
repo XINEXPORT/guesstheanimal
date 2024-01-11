@@ -34,7 +34,7 @@ useEffect(()=>{
             //this where the gamecount state will increase
             //if the gamecount is less than 3, set display to correct answer, otherwise set to finished component
             // setDisplay(<FinishQuiz/>)
-            if(correctAnswerCount < 11){
+            if(correctAnswerCount < 1){
                 setDisplay(
                     <CorrectAnswer 
                         currentanswer={quiz[0]}

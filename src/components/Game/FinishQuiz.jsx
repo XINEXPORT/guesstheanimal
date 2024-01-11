@@ -1,4 +1,6 @@
 import './FinishQuiz.css';
+import React from 'react';
+import Confetti from './Confetti';
 import {useState} from 'react'
 import { useLoaderData, useNavigate } from 'react-router-dom';
 
@@ -18,7 +20,8 @@ const FinishQuiz = () => {
             <div id = "finalanimals">
             <h1 className = "finished">Finished!</h1>
             <button onClick={()=>{navigate("/animalflashcards")}} id="animalflashcards" style={{}}>Continue to Animal Flash Cards</button>
-            <img id = "fireworks" src = './public/img/fireworks-1993221.svg'/>
+            {/* <img id = "fireworks" src = './public/img/fireworks-1993221.svg'/> */}
+            <Confetti/>
             {/* {allAnimals} */}
             </div>
         </main>
