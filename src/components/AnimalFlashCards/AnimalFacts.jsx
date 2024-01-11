@@ -42,7 +42,7 @@ console.log(animals)
           //THE LOGGEDIN ? & ISFAVORITED? IS A NESTED TERNARY
           <>
             <h1 className="animal-name">{animalName}</h1>
-            <div><img src={animalImg} alt={`Animal ${animalName}`} /></div>
+            <div><img class = "wiggle" src={animalImg} alt={`Animal ${animalName}`} /></div>
               {loggedIn ? !isFavorited ? (
               <button className="star" onClick={favAnimal}>
                 <FaRegStar id="staropen" className='staropen' />

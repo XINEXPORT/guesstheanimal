@@ -20,9 +20,8 @@ const FinishQuiz = () => {
             <div id = "finalanimals">
             <h1 className = "finished">Finished!</h1>
             <button onClick={()=>{navigate("/animalflashcards")}} id="animalflashcards" style={{}}>Continue to Animal Flash Cards</button>
-            {/* <img id = "fireworks" src = './public/img/fireworks-1993221.svg'/> */}
             <Confetti/>
-            {/* {allAnimals} */}
+           {allAnimals}
             </div>
         </main>
     )
