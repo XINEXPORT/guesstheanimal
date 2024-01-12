@@ -34,7 +34,7 @@ import { useNavigate } from 'react-router-dom';
         <Link to="/" id="homelink">
           Home
         </Link>
-        <Link to="/game" id="gamelink">
+        <Link to="/game" id="gamelink" onClick={() => dispatch({type: 'reset'})}>
           Game
         </Link>
         <Link to="/animalflashcards" id="animal-flashlink">

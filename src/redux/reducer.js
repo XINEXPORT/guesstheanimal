@@ -5,7 +5,9 @@ const {data}= await axios.get('/api/auth/status')
 const initialState = {
     loggedIn: data.loggedIn,
     user: data.user,
-    modal:'none'
+    modal:'none',
+    correct: 0,
+    incorrect: 0,
 }
 
 export default function reducer(state = initialState, action){
@@ -18,6 +20,12 @@ export default function reducer(state = initialState, action){
             return {...state, modal:'flex'}
         case 'page-off':
             return {...state, modal:'none'}
+        case 'correct':
+            return{...state, correct:action.payload}
+        case 'incorrect':
+            return{...state, incorrect:action.payload}
+        case 'reset':
+            return{...state, correct:0, incorrect:0}
         default:
             return state
 }}

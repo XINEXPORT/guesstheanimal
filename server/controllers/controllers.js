@@ -86,7 +86,7 @@ const updateContact = async (req,res) =>{
 const updateScore = async (req, res) => {
     const {totalScore} = req.body
     const user = await User.findByPk(req.session.user.userId)
-    user.totalscore += totalScore || user.totalscore
+    user.totalscore += totalScore
     user.gamecount += 1
     user.save()
     res.json(user)

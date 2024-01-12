@@ -7,6 +7,7 @@ import AnimalFacts from './components/AnimalFlashCards/AnimalFacts.jsx';
 import LoginPage from './components/Login/LoginPage.jsx';
 import Dashboard from './components/Dashboard/Dashboard.jsx';
 import FinishQuiz from './components/Game/FinishQuiz.jsx';
+import { useDispatch } from 'react-redux';
 
 //PAGE ROUTES
 const router=createBrowserRouter(
@@ -67,6 +68,10 @@ const router=createBrowserRouter(
                     }
             }
         }}
+/>
+<Route
+    path = "/game/finish"
+    element = {<FinishQuiz/>}
 />
 <Route
 //LOGIN

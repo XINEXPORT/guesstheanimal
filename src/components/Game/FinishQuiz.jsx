@@ -1,29 +1,36 @@
 import './FinishQuiz.css';
 import React from 'react';
 import Confetti from './Confetti';
-import {useState} from 'react'
-import { useLoaderData, useNavigate } from 'react-router-dom';
+import {useState,useEffect} from 'react'
+import { useLocation, useNavigate } from 'react-router-dom';
 import MainGame from './MainGame';
 import axios from 'axios';
+import { useSelector, useDispatch } from 'react-redux';
 
 //PROPERTIES
-const FinishQuiz = ({scoreCount, correctAnswerCount, incorrectAnswerCount}) => {
-    const {animals} =useLoaderData()
+const FinishQuiz = () => {
     const navigate = useNavigate();
-
-    let allAnimals = animals.map(
-        (animalObj)=>{
-             return <img src={animalObj.animalImg}/>
+    const dispatch = useDispatch();
+    const location = useLocation();
+    const correct = useSelector(state=>state.correct)
+    const incorrect = useSelector(state=>state.incorrect)
+    const reduxValues = [correct, incorrect]
+    const copyValues = [...reduxValues]
+    const [copyCorrect, copyIncorrect] = copyValues
+    // let allAnimals = animals.map(
+    //     (animalObj)=>{
+    //          return <img src={animalObj.animalImg}/>
+    //     }
+    // )
+    useEffect(() => {
+        const updateTotalScore = async () => {
+            const gameScore = correct*5;
+            await axios.put(`/api/user`, {
+                totalScore: gameScore,
+            });
         }
-    )
-
-  const updateTotalScore = async () => {
-      const gameScore = correctAnswerCount*5;
-        await axios.put(`/api/user`, {
-        totalScore: gameScore,
-      });
-}
-updateTotalScore()
+        updateTotalScore()
+    },[])
 
     return(
         <main id="home">
@@ -32,11 +39,11 @@ updateTotalScore()
             <main id = "scorecard">
                 <h1 id = "result">Result</h1>
                 <label id ="score">Total Score: </label>
-                <p>{correctAnswerCount*5}</p>
+                <p>{copyCorrect*5}</p>
                 <label id = "correctanswers">Correct Answers:</label>
-                <p>{correctAnswerCount}</p>
+                <p>{copyCorrect}</p>
                 <label id = "incorrectanswers">Incorrect Answers:</label>
-                <p>{incorrectAnswerCount}</p>
+                <p>{copyIncorrect}</p>
             </main>
             <button onClick={()=>{navigate("/animalflashcards")}} id="contanimalflashcards" style={{}}>Continue to Animal Flash Cards</button>
             <Confetti/>
