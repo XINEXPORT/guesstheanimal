@@ -124,6 +124,10 @@ FavoriteAnimal.init(
 );
 
 //ALWAYS MAKE SURE 'ID' IS 'Id'
+//If User admin page is created,
+//The example below is how deleting users will also delete their favoriteAnimals
+//This allows the deletions of users to also delete their corresponding data in association tables
+//Animal.belongsToMany(User, {through: FavoriteAnimal, foreignKey: 'animalId', onDelete: 'CASCADE', hook: true});
 User.belongsToMany(Animal, {through: FavoriteAnimal, foreignKey: 'userId'});
 Animal.belongsToMany(User, {through: FavoriteAnimal, foreignKey: 'animalId'});
 

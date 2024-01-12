@@ -24,3 +24,12 @@
     align-items: center;
     text-align: center;
 }
+#scorecard{
+    background: white;
+    border-radius: 1rem;
+    padding: 30px;
+}
+#result{
+    font-size: xx-large;
+    text-decoration: underline;
+}

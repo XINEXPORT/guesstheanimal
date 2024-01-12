@@ -83,7 +83,6 @@ const updateContact = async (req,res) =>{
 }
 
 //IMAGE CONTROLLER
-
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
         cb(null, 'public/profileimg');

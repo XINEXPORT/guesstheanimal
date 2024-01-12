@@ -26,6 +26,10 @@ const MainGame = ()=>{
     const [display,setDisplay]=useState(<Quiz q={quiz} setAnswered={setAnswered} setUserResponse={setUserResponse}/>)
     //CORRECT ANSWER COUNT STATE
     const [correctAnswerCount,setCorrectAnswerCount]=useState(0);
+    //INCORRECT ANSWER COUNT STATE
+    const [incorrectAnswerCount, setIncorrectAnswerCount]=useState(1);
+    //SCORE STATE
+    const [scoreCount,setScoreCount]=useState(1)
     //ANIMAL ARR
     const [animalArr, setAnimalArr]=useState(animals)
 
@@ -35,10 +39,13 @@ useEffect(()=>{
         let answer=quiz[0].animalId
         if(answer === userResponse){
             setCorrectAnswerCount(correctAnswerCount+1)
+            setScoreCount(correctAnswerCount*5)
+            
             //this is where the gamecount state will increase
             //if the gamecount is less than num, set display to correct answer, otherwise set to finished component
             // setDisplay(<FinishQuiz/>)
-            if(correctAnswerCount < 4){
+            //Win condition
+            if(correctAnswerCount+incorrectAnswerCount < 5){
             
             //Make a copy of the animal array and filter out the correct answer
             //then set the new animal array to the filtered copy
@@ -57,9 +64,16 @@ useEffect(()=>{
                         />)
             } else{
                 setDisplay(
-                <FinishQuiz/>)
+                <FinishQuiz 
+                scoreCount={scoreCount}
+                correctAnswerCount={correctAnswerCount} 
+                setCorrectAnswerCount={setCorrectAnswerCount}
+                incorrectAnswerCount={incorrectAnswerCount}
+                setIncorrectAnswerCount={setIncorrectAnswerCount}
+                />)
             }
         } else{
+            setIncorrectAnswerCount(incorrectAnswerCount+1)
             setDisplay(
             <IncorrectAnswer 
                 setUserResponse={setUserResponse} 

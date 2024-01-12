@@ -10,6 +10,7 @@
    - IncorrectAnswer
      - BackButton
    - FinishQuiz
+     - Confetti
 - Animal Facts
 - Dashboard
   - MyDashboard

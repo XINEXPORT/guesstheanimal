@@ -19,11 +19,6 @@ const MyDashboard = ({ userId,firstName, lastName, address,setAddress, city,setC
   
     const handleSaveClick= async () => {
 
-        // address: address,
-        // city: city,
-        // state: state,
-        // zipcode: zipcode,
-        // email: email
         console.log(image)
         const formData = new FormData()
 
@@ -46,11 +41,11 @@ const MyDashboard = ({ userId,firstName, lastName, address,setAddress, city,setC
       setisEditing(false);
 
     }
-  
+//?? determines whether the image is null and then uses the ../../../public/profileimg variable instead
       return (
         <div className={`my-dashboardcard ${isEditing ? 'edit-mode' : ''}`}>
           <h1 className = "rainbow rainbow_text_animated">Hello, {firstName} {lastName}</h1>
-          <img className = "img"src={image}/>
+          <img className = "img"src={image ?? "../../../public/profileimg/placeholder.png"} alt = "Profile Placeholder Image"/>
           <p id = "contact-info">Contact Information</p>
   
        {isEditing ? (  
@@ -58,7 +53,7 @@ const MyDashboard = ({ userId,firstName, lastName, address,setAddress, city,setC
       <Form method = "PUT" encType = 'multipart/form-data' >
 
       <Form.Group controlId="fileName" className="mb-3">
-        <Form.Label>Upload Profile Image</Form.Label>
+        <Form.Label>Profile Image</Form.Label>
         <Form.Control 
             type="file" 
             name= "image" 
