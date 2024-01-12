@@ -8,7 +8,8 @@ import {
   getFavoriteAnimals, 
   starAnimal, 
   updateContact, 
-  upload 
+  upload ,
+  updateScore
 } from './controllers/controllers.js';
 import {
   login,
@@ -50,6 +51,7 @@ app.post('/api/favoriteanimals', starAnimal);
 //USERS ENDPOINTS
 app.get('/api/user', getUsers);
 app.put('/api/user/:id', upload, updateContact);
+app.put('/api/user', updateScore)
 
 ViteExpress.listen(app, port, () => console.log(`Server is listening on http://localhost:${port}`));
 

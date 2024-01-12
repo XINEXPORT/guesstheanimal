@@ -4,11 +4,11 @@ import Confetti from './Confetti';
 import {useState} from 'react'
 import { useLoaderData, useNavigate } from 'react-router-dom';
 import MainGame from './MainGame';
+import axios from 'axios';
 
 //PROPERTIES
 const FinishQuiz = ({scoreCount, correctAnswerCount, incorrectAnswerCount}) => {
     const {animals} =useLoaderData()
-    const [animalImg, setAnimalImg] = useState()
     const navigate = useNavigate();
 
     let allAnimals = animals.map(
@@ -16,6 +16,15 @@ const FinishQuiz = ({scoreCount, correctAnswerCount, incorrectAnswerCount}) => {
              return <img src={animalObj.animalImg}/>
         }
     )
+
+  const updateTotalScore = async () => {
+      const gameScore = correctAnswerCount*5;
+        await axios.put(`/api/user`, {
+        totalScore: gameScore,
+      });
+}
+updateTotalScore()
+
     return(
         <main id="home">
             <div id = "finalanimals">
@@ -31,7 +40,6 @@ const FinishQuiz = ({scoreCount, correctAnswerCount, incorrectAnswerCount}) => {
             </main>
             <button onClick={()=>{navigate("/animalflashcards")}} id="contanimalflashcards" style={{}}>Continue to Animal Flash Cards</button>
             <Confetti/>
-           {/* {allAnimals} */}
             </div>
         </main>
     )

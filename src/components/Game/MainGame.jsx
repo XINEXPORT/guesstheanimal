@@ -13,8 +13,6 @@ const MainGame = ()=>{
     const {animals} =useLoaderData()
     let choices = lodash.sampleSize(animals, 3)
 
-    console.log(choices)
-
     //QUIZ STATE
     const [quiz,setQuiz]=useState(choices);
     //IS GAME ANSWERED STATE
@@ -39,13 +37,13 @@ useEffect(()=>{
         let answer=quiz[0].animalId
         if(answer === userResponse){
             setCorrectAnswerCount(correctAnswerCount+1)
-            setScoreCount(correctAnswerCount*5)
             
             //this is where the gamecount state will increase
             //if the gamecount is less than num, set display to correct answer, otherwise set to finished component
             // setDisplay(<FinishQuiz/>)
             //Win condition
-            if(correctAnswerCount+incorrectAnswerCount < 5){
+            //SET GAME BACK TO <5
+            if(correctAnswerCount+incorrectAnswerCount < 2){
             
             //Make a copy of the animal array and filter out the correct answer
             //then set the new animal array to the filtered copy

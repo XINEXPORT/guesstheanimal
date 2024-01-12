@@ -4,7 +4,7 @@
 }
 #mydashboard{
     display: flex;
-    align-items: center;
+    align-items:flex-start;
 }
 #myfavoriteanimals{
     margin-bottom: 20%;
@@ -40,6 +40,21 @@ label{
     background-color: #F1E3B7;
     padding: 1%;
     padding-bottom: 5%;
+}
+#myscore{
+    color: black;
+    max-width: auto;
+    max-height: auto;
+    border-radius: .5rem;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: #F1E3B7;
+    padding: 1%;
+}
+#scorenum {
+    font-size: xx-large;
+}
+#gameplay{
+    font-size: xx-large;
 }
 .rainbow {
     text-align: center;

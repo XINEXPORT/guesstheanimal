@@ -144,7 +144,8 @@ const christine = await User.create({
     zipcode: '75001',
     email: 'christinehoangt@gmail.com',
     password: 'test',
-    image: '../public/profileimg/Shep.png'
+    image: '../public/profileimg/Shep.png',
+    totalscore: 10
 })
 
 //FAVORITE ANIMAL SEED

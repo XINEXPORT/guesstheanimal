@@ -82,6 +82,16 @@ const updateContact = async (req,res) =>{
         res.json(user)
 }
 
+//UPDATE GAME SCORE
+const updateScore = async (req, res) => {
+    const {totalScore} = req.body
+    const user = await User.findByPk(req.session.user.userId)
+    user.totalscore += totalScore || user.totalscore
+    user.gamecount += 1
+    user.save()
+    res.json(user)
+}
+
 //IMAGE CONTROLLER
 const storage = multer.diskStorage({
     destination: (req, file, cb) => {
@@ -111,4 +121,4 @@ const upload = multer({
 
 
 
-export {getAnimals, getUsers, getFavoriteAnimals, starAnimal, updateContact, upload}
+export {getAnimals, getUsers, getFavoriteAnimals, starAnimal, updateContact, upload, updateScore}

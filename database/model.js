@@ -92,6 +92,12 @@ User.init(
         },
         image: {
             type:DataTypes. STRING,
+        },
+        totalscore:{
+            type:DataTypes.INTEGER,
+        },
+        gamecount:{
+            type:DataTypes.INTEGER,
         }
     },
 {
