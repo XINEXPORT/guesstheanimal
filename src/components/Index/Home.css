@@ -1,9 +1,5 @@
-img{
-    margin: 30px 20px 20px;
-    
-  }
-#home{
-    display: flex;
-    justify-content: center;
+ img {
+    margin: 1px 10px 10px;
+    margin-bottom: 1px;
 }
-/* #allanimals{} */
+  

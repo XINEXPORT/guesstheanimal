@@ -1,5 +1,13 @@
+#incorrect-answer{
+  margin-top: 160px;
+}
+#incorrect-title{
+  padding: 80px;
+  text-align: center;
+  font-size: 70px;
+  color: rgb(0, 0, 0);
+}
 #try-again{
-    margin: 6em;
     padding: .5em;
     font-size: xx-large;
     background-color: rgb(255, 255, 255);

@@ -8,7 +8,7 @@ const Home = ({}) => {
 
     let allAnimals = animals.map(
         (animalObj)=>{
-             return <img src={animalObj.animalImg}/>
+             return <img key={animalObj.animalId} src={animalObj.animalImg}/>
         }
     )
     return(

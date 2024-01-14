@@ -71,15 +71,19 @@ const getUsers = async (req,res) =>{
 const updateContact = async (req,res) =>{
     const {id} = req.params
     const {address, city, state, zipcode, email, image} = req.body
+    
     const user = await User.findByPk(+id)
         user.address = address || user.address
         user.city = city || user.city
         user.state = state || user.state
         user.zipcode = zipcode || user.zipcode
         user.email = email || user.email
-        user.image = req.file.path
-        user.save()
-        res.json(user)
+
+        if (req.file){
+            user.image = req.file.path
+        }
+       await user.save()
+       return res.json(user)
 }
 
 //UPDATE GAME SCORE

@@ -47,7 +47,7 @@ import { useNavigate } from 'react-router-dom';
         }
         <nav to="/login" id="login-register">
           {loggedIn ? (
-            <button class = "jelly-button" onClick={logoutUser}>
+            <button className = "jelly-button" onClick={logoutUser}>
               <span>Logout</span>
               </button>
           ) : (
@@ -55,7 +55,7 @@ import { useNavigate } from 'react-router-dom';
             //useNavigate forces events to navigate to a different page
             <button onClick={()=>{
                 navigate("/login")
-            }} class="jelly-button" style={{color: '#000000' }}>
+            }} className="jelly-button" style={{color: '#000000' }}>
               <span>Login/Register</span>
               </button>
           )}

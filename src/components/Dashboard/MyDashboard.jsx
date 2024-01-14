@@ -45,7 +45,7 @@ const MyDashboard = ({ userId,firstName, lastName, address,setAddress, city,setC
       return (
         <div className={`my-dashboardcard ${isEditing ? 'edit-mode' : ''}`}>
           <h1 className = "rainbow rainbow_text_animated">Hello, {firstName} {lastName}</h1>
-          <img className = "img"src={image ?? "../../../public/profileimg/placeholder.png"} alt = "Profile Placeholder Image"/>
+          <img className = "profileimg"src={image ?? "../../../public/profileimg/placeholder.png"} alt = "Profile Placeholder Image"/>
           <p id = "contact-info">Contact Information</p>
   
        {isEditing ? (  

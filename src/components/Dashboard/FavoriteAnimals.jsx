@@ -8,13 +8,11 @@ const FavoriteAnimals = ({ favoriteAnimalData }) => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const [favoriteAnimals, setFavoriteAnimals] = useState([]);
-
-    console.log(favoriteAnimalData)
     
     useEffect(() => {
             const myFavList = favoriteAnimalData.map(( animal ) => (
-                <div key={animal.favoriteAnimalId}>
-                    <img src={animal.animalImg} />
+                <div key = {animal.animalImg}>
+                    <img key={animal.animalId} src={animal.animalImg} />
                     <h1 className='favAnimalName'>{animal.animalName}</h1>
                 </div>
             ));
@@ -25,7 +23,7 @@ const FavoriteAnimals = ({ favoriteAnimalData }) => {
         <div id="myfavanimals">
             <div id="myfavlist">
             <h1 className="rainbow rainbow_text_animated">My Favorite Animals</h1>
-            {favoriteAnimals}
+            <div>{favoriteAnimals}</div>
             <button onClick={()=>{
                 navigate("/animalflashcards")
             }} id="addanimals" style={{}}>Add Animals</button>

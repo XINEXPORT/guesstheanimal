@@ -9,6 +9,7 @@ const IncorrectAnswer =({setAnswered, setUserResponse, quiz, setDisplay})=>{
     return(
         <main id = "incorrect-answer">
             <div>
+            <h1 id = "incorrect-title">Incorrect</h1>
                 <button id="try-again"
                 onClick={()=>{
                     setUserResponse(null)

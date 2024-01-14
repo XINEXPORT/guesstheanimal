@@ -1,3 +1,9 @@
-img{
-
+.my-dashboardcard{
+    margin-top: 10px;
+}
+.profileimg{
+    width: 300px;
+    height: 300px;
+    margin-top: 1px;
+    margin-bottom: 50px;
 }

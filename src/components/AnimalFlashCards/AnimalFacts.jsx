@@ -8,7 +8,6 @@ import axios from 'axios';
 const AnimalFacts = () => {
   const { animals } = useLoaderData();
   const loggedIn = useSelector((state) => state.loggedIn);
-console.log(animals)
 
   const AnimalCard = ({ animalName, animalImg, animalDetails, animalId, users }) => {
     let initialFavorite = loggedIn? users.length : false
@@ -46,7 +45,7 @@ console.log(animals)
           //THE LOGGEDIN ? & ISFAVORITED? IS A NESTED TERNARY
           <>
             <h1 className="animal-name">{animalName}</h1>
-            <div><img class = "wiggle" src={animalImg} alt={`Animal ${animalName}`} /></div>
+            <div><img className = "wiggle" src={animalImg} alt={`Animal ${animalName}`} /></div>
               {loggedIn ? !isFavorited ? (
               <button className="star" onClick={favAnimal}>
                 <FaRegStar id="staropen" className='staropen' />

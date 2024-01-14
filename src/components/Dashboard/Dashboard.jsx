@@ -18,8 +18,6 @@ const Dashboard = () => {
   const [email, setEmail]=useState(userInfo.email)
   const [image, setImage]=useState(userInfo.image)
 
-  console.log(userInfo)
-
   useEffect(()=>{
     if(userInfo.error){
       navigate("/login")
