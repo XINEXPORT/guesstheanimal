@@ -5,6 +5,7 @@
 #mydashboard{
     display: flex;
     align-items:flex-start;
+    margin-top: 140px;
 }
 #myfavoriteanimals{
     margin-bottom: 20%;

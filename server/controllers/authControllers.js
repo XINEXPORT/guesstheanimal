@@ -43,7 +43,7 @@ const register = async(req,res)=>{
             res.status(401).json({error: 'user exists'})
             return
         }else{
-            user= await User.create({firstName, lastName, address, city, state, zipcode, email,password})
+            user= await User.create({firstName, lastName, address, city, state, zipcode, email,password, totalscore:0, gamecount:0})
             req.session.user = user.toJSON()
             let userCopy = {...user.toJSON()}
             delete userCopy.password

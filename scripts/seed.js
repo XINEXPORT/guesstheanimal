@@ -132,6 +132,7 @@ for (let i=0; i < arr.length; i++){
         zipcode: arr[i].zipcode,
         email: `test${i}@email.com`, 
         password:'test', 
+        totalscore: 0
     })
 }
 

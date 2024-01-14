@@ -21,11 +21,11 @@ const SoundButtonLink = ({ sound, setAnswered, setUserResponse, animalId }) => {
       </span>
       </button>
 
-      <button class="sound-select-btn" onClick={() => {
+      <button class="sound-select-btn jelly-button" onClick={() => {
         setUserResponse(animalId);
         setAnswered(true);
       }}>
-        <p id="select-sound">Select</p>
+        <span id="select-sound">Select</span>
       </button>
     </div>
   );

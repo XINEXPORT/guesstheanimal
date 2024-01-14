@@ -2,10 +2,10 @@ import './FinishQuiz.css';
 import React from 'react';
 import Confetti from './Confetti';
 import {useState,useEffect} from 'react'
-import { useLocation, useNavigate } from 'react-router-dom';
+import { useLoaderData, useLocation, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import MainGame from './MainGame';
 import axios from 'axios';
-import { useSelector, useDispatch } from 'react-redux';
 
 //PROPERTIES
 const FinishQuiz = () => {
@@ -17,11 +17,8 @@ const FinishQuiz = () => {
     const reduxValues = [correct, incorrect]
     const copyValues = [...reduxValues]
     const [copyCorrect, copyIncorrect] = copyValues
-    // let allAnimals = animals.map(
-    //     (animalObj)=>{
-    //          return <img src={animalObj.animalImg}/>
-    //     }
-    // )
+
+
     useEffect(() => {
         const updateTotalScore = async () => {
             const gameScore = correct*5;

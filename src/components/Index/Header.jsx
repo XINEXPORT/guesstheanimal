@@ -47,13 +47,17 @@ import { useNavigate } from 'react-router-dom';
         }
         <nav to="/login" id="login-register">
           {loggedIn ? (
-            <button id = "logout" onClick={logoutUser}>Logout</button>
+            <button class = "jelly-button" onClick={logoutUser}>
+              <span>Logout</span>
+              </button>
           ) : (
             //assign OnClick event with useNavigate to replicate Link tag behvavior
             //useNavigate forces events to navigate to a different page
             <button onClick={()=>{
                 navigate("/login")
-            }} id="login" style={{color: '#000000' }}>Login/Register</button>
+            }} class="jelly-button" style={{color: '#000000' }}>
+              <span>Login/Register</span>
+              </button>
           )}
         </nav>
       </nav>

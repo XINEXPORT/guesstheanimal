@@ -18,7 +18,11 @@ Execute the following command:
 
 
 # Resources
+## Backend
 - https://www.youtube.com/watch?v=sVYrH166LXM&ab_channel=GreatAdib
-- https://www.npmjs.com/package/confetti-js
 - https://www.npmjs.com/package/multer
+## Frontend
 - https://www.youtube.com/watch?v=UX5HIrxbRUc
+- https://www.npmjs.com/package/confetti-js
+- https://codepen.io/arronhunt/pen/WWOOeO
+- https://www.joshwcomeau.com/animation/3d-button/

@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik+Doodle+Shadow');
+
 #cardcontainer {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-top: 140px;
   }
   .animal-card {
     font-family: 'IndieFlowered', cursive;
@@ -20,7 +23,7 @@
     width: 300px;
     color: black;
     font-size: x-large;
-    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+    box-shadow: 0px -23px 25px 0px rgba(0, 0, 0, 0.17) inset, 0px -36px 30px 0px rgba(0, 0, 0, 0.15) inset, 0px -79px 40px 0px rgba(0, 0, 0, 0.1) inset, 0px 2px 1px rgba(0, 0, 0, 0.06), 0px 4px 2px rgba(0, 0, 0, 0.09), 0px 8px 4px rgba(0, 0, 0, 0.09), 0px 16px 8px rgba(0, 0, 0, 0.09); 
   }
   .animal-card img.wiggle {
     height: 250px;
@@ -36,8 +39,9 @@
     text-align: center;
   }
   .animal-name {
-    font-size: 35px;
+    font-size: 50px;
     text-align: center;
+    font-family: "Rubik Doodle Shadow";
   }
   .star {
     position: absolute; 
