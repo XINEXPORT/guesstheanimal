@@ -42,7 +42,7 @@ const FinishQuiz = () => {
                 <label id = "incorrectanswers">Incorrect Answers:</label>
                 <p>{copyIncorrect}</p>
             </main>
-            <button onClick={()=>{navigate("/animalflashcards")}} id="contanimalflashcards" style={{}}>Continue to Animal Flash Cards</button>
+            <button onClick={()=>{navigate("/animalflashcards")}} className = "jelly-button" style={{}}><span>Continue to Animal Flash Cards</span></button>
             <Confetti/>
             </div>
         </main>

@@ -26,7 +26,7 @@ const FavoriteAnimals = ({ favoriteAnimalData }) => {
             <div>{favoriteAnimals}</div>
             <button onClick={()=>{
                 navigate("/animalflashcards")
-            }} id="addanimals" style={{}}>Add Animals</button>
+            }} className = "jelly-button" style={{}}><span>Add Animals</span></button>
             </div>
         </div>
     );

@@ -1,43 +1,35 @@
-#forms{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+#page{
+    margin-top: 600px;
 }
-.login{
+#forms{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+.login, .register{
     display:flex;
     flex-direction: column;
-    justify-content: left;    
+    justify-content: center;    
     align-items: center;
-    background-color: white;
-    border: 2px solid black;
     border-radius: 25px;
     gap: 10px;
     padding: 50px;
-    width: 10%;
-    position: absolute;
-    top: 50%;
-    left: 40%;
+    height: auto;
+    width: 300px; 
+    position: relative;
     transform: translate(-50%, -50%); 
+    background-color: rgba(213, 250, 255, 1);
+    box-shadow: 0px 0px 0px 3px rgba(255,255,255,1),
+    0px 0px 0px 6px rgba(241,248,249,1),
+    0px 0px 0px 8px rgba(108,255,255,1),
+    0px 0px 0px 12px rgba(38,144,169,1),
+    0px 0px 0px 18px rgba(28,120,136,1),
+    0px 0px 0px 15px rgba(88,197,214,1),
+    0px 0px 0px 18px rgba(66,155,171,1);
 }
 #login{
     margin: 10%;
     color: white;
-}
-.register{
-    display:flex;
-    flex-direction: column;
-    justify-content: left;    
-    align-items: center;
-    background-color: white;
-    border: 2px solid black;
-    border-radius: 25px;
-    gap: 10px;
-    padding: 70px;
-    width: 200px;
-    position: absolute;
-    top: 80%;
-    left: 60%;
-    transform: translate(-50%, -50%);
 }
 .title{
     text-decoration: underline;

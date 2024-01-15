@@ -50,9 +50,13 @@ const MyDashboard = ({ userId,firstName, lastName, address,setAddress, city,setC
       return (
         <div className={`my-dashboardcard ${isEditing ? 'edit-mode' : ''}`}>
           <h1 className = "rainbow rainbow_text_animated">Hello, {firstName} {lastName}</h1>
+          {image || previewImage? (
           <img className="profileimg" src={previewImage || image} alt="Profile Image" />
+          ):(
+          <img className = "profileimg" src="../../../public/profileimg/placeholder.png"/>  
+          )}
           <p id = "contact-info">Contact Information</p>
-  
+
        {isEditing ? (  
       <>  
       <Form method = "PUT" encType = 'multipart/form-data' >
