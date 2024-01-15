@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 60px;
 }
 .finished{
     font-size: 60px;
@@ -21,7 +21,9 @@
 }
 #scorecard{
     border-radius: 1rem;
-    padding: 10px;
+    padding: 2px;
+	padding-bottom: 10px;
+	margin-bottom: 50px;
     background-color: rgba(213, 250, 255, 1);
     box-shadow: 0px 0px 0px 3px rgba(255,255,255,1),
     0px 0px 0px 6px rgba(241,248,249,1),
@@ -30,11 +32,17 @@
     0px 0px 0px 18px rgba(28,120,136,1),
     0px 0px 0px 15px rgba(88,197,214,1),
     0px 0px 0px 18px rgba(66,155,171,1);
-    margin-bottom: 20px;
+
 }
 #result{
     font-size: xx-large;
     text-decoration: underline;
+	margin-bottom: 1px;
+}
+.num{
+
+	font-weight: bold;
+	font-size: x-large;
 }
 /* JELLY BUTTON GREEN EFFECT */
 .jelly-button-green {

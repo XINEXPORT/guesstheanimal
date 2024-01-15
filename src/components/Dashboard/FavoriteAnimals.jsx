@@ -11,7 +11,7 @@ const FavoriteAnimals = ({ favoriteAnimalData }) => {
     
     useEffect(() => {
             const myFavList = favoriteAnimalData.map(( animal ) => (
-                <div key = {animal.animalImg}>
+                <div key = {animal.animalImg} className="child bounce">
                     <img key={animal.animalId} src={animal.animalImg} />
                     <h1 className='favAnimalName'>{animal.animalName}</h1>
                 </div>

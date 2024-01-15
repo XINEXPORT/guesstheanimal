@@ -39,10 +39,17 @@ nav a {
 nav a:hover{
     text-decoration: underline;
 }
-#homelink, #gamelink, #animal-flashlink, #dashboard{
+#homelink, #gamelink, #dashboard{
     margin: 7%;
     color: white;
 	font-size: xx-large;
+	font-weight: bold;
+	font-family: "Rubik Doodle Shadow";
+}
+#animal-flashlink{
+	margin: 7%;
+    color: white;
+	font-size: x-large;
 	font-weight: bold;
 	font-family: "Rubik Doodle Shadow";
 }

@@ -74,35 +74,35 @@ const MyDashboard = ({ userId,firstName, lastName, address,setAddress, city,setC
             size="lg" />
       </Form.Group>
       <Form.Group controlId="address" className="mb-3">
-          <Form.Label> Address: </Form.Label>
+          <Form.Label> Address </Form.Label>
           <Form.Control 
             type = "text" 
             value = {address} 
             onChange={(e)=>setAddress(e.target.value)}/>
        </Form.Group>    
        <Form.Group controlId="city" className="mb-3">
-          <Form.Label> City: </Form.Label>
+          <Form.Label> City </Form.Label>
           <Form.Control 
             type = "text" 
             value = {city} 
             onChange={(e)=>setCity(e.target.value)}/>
        </Form.Group> 
        <Form.Group controlId="state" className="mb-3">
-          <Form.Label> State: </Form.Label>
+          <Form.Label> State </Form.Label>
           <Form.Control 
             type = "text" 
             value = {state} 
             onChange={(e)=>setState(e.target.value)}/>
         </Form.Group>
         <Form.Group controlId="zipcode" className="mb-3">
-          <Form.Label> Zipcode: </Form.Label>
+          <Form.Label> Zipcode </Form.Label>
           <Form.Control 
             type = "text" 
             value = {zipcode} 
             onChange={(e)=>setZipcode(e.target.value)}/>
         </Form.Group>
         <Form.Group controlId="emailaddress" className="mb-3">
-          <Form.Label> Email Address: </Form.Label>
+          <Form.Label> Email Address </Form.Label>
           <Form.Control 
             type = "text" 
             value = {email} 
@@ -117,15 +117,15 @@ const MyDashboard = ({ userId,firstName, lastName, address,setAddress, city,setC
       ):(
   
       <div>
-          <label htmlFor = "address" > Address: </label>
+          <label htmlFor = "address" > Address </label>
           <div className = "form">{address}</div>
-          <label htmlFor = "city" > City: </label>
+          <label htmlFor = "city" > City </label>
           <div className = "form">{city}</div>
-          <label htmlFor = "state" > State: </label>
+          <label htmlFor = "state" > State </label>
           <div className = "form">{state}</div>
-          <label htmlFor = "zipcode" > Zipcode: </label>
+          <label htmlFor = "zipcode" > Zipcode </label>
           <div className = "form">{zipcode}</div>
-          <label htmlFor = "emailaddress" > Email Address: </label>
+          <label htmlFor = "emailaddress" > Email Address </label>
           <div className = "form">{email}</div>
   
         <button className = "edit-btn" onClick = {handleEditClick}><FaPencil /></button>
