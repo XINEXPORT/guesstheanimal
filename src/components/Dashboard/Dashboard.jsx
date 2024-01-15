@@ -43,12 +43,12 @@ const Dashboard = () => {
         image = {image}
         setImage = {setImage}
       />
-       <div id = "myscore">
+       {/* <div id = "myscore">
           <label className = "rainbow_text_animated">My Score</label>
           <p id = "scorenum">{userInfo.totalscore}</p>
           <label className = "rainbow_text_animated">Game Plays</label>
           <p id = "gameplay">{userInfo.gamecount}</p>
-      </div>
+      </div> */}
       <div id = "myfavoriteanimals">
         <FavoriteAnimals
         favoriteAnimalData={favoriteanimals}

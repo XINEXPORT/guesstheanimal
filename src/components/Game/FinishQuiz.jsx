@@ -19,15 +19,15 @@ const FinishQuiz = () => {
     const [copyCorrect, copyIncorrect] = copyValues
 
 
-    useEffect(() => {
-        const updateTotalScore = async () => {
-            const gameScore = correct*5;
-            await axios.put(`/api/user`, {
-                totalScore: gameScore,
-            });
-        }
-        updateTotalScore()
-    },[])
+    // useEffect(() => {
+    //     const updateTotalScore = async () => {
+    //         const gameScore = correct*5;
+    //         await axios.put(`/api/user`, {
+    //             totalScore: gameScore,
+    //         });
+    //     }
+    //     updateTotalScore()
+    // },[])
 
     return(
         <main id="home">

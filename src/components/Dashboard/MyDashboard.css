@@ -1,9 +1,18 @@
 .my-dashboardcard{
     margin-top: 10px;
+    background-color: rgba(213, 250, 255, 1);
+    box-shadow: 0px 0px 0px 3px rgba(255,255,255,1),
+    0px 0px 0px 6px rgba(241,248,249,1),
+    0px 0px 0px 8px rgba(108,255,255,1),
+    0px 0px 0px 12px rgba(38,144,169,1),
+    0px 0px 0px 18px rgba(28,120,136,1),
+    0px 0px 0px 15px rgba(88,197,214,1),
+    0px 0px 0px 18px rgba(66,155,171,1);
 }
 .profileimg{
     width: 300px;
     height: 300px;
     margin-top: 1px;
     margin-bottom: 50px;
+    border-radius: 1rem;
 }

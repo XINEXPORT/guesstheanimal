@@ -8,6 +8,7 @@ import { Container, Form, Button } from 'react-bootstrap'
 
 const MyDashboard = ({ userId,firstName, lastName, address,setAddress, city,setCity, state,setState, zipcode,setZipcode, email,setEmail, image, setImage }) => {
     const [isEditing, setisEditing]=useState(false);
+    const [previewImage, setPreviewImage] = useState(null);
 
     const handleCancelClick=()=>{
       setisEditing(false);
@@ -16,10 +17,14 @@ const MyDashboard = ({ userId,firstName, lastName, address,setAddress, city,setC
     const handleEditClick=()=>{
       setisEditing(true);
     }
+
+    const handleImageChange = (e)=>{
+      const file = e.target.files[0];
+      setPreviewImage(URL.createObjectURL(file));
+      setImage(file);
+    }
   
     const handleSaveClick= async () => {
-
-        console.log(image)
         const formData = new FormData()
 
         formData.append('image', image)
@@ -38,14 +43,14 @@ const MyDashboard = ({ userId,firstName, lastName, address,setAddress, city,setC
         setZipcode(data.zipcode)
         setEmail(data.email)
 
-      setisEditing(false);
+        setisEditing(false);
 
     }
 //?? determines whether the image is null and then uses the ../../../public/profileimg variable instead
       return (
         <div className={`my-dashboardcard ${isEditing ? 'edit-mode' : ''}`}>
           <h1 className = "rainbow rainbow_text_animated">Hello, {firstName} {lastName}</h1>
-          <img className = "profileimg"src={image ?? "../../../public/profileimg/placeholder.png"} alt = "Profile Placeholder Image"/>
+          <img className="profileimg" src={previewImage || image} alt="Profile Image" />
           <p id = "contact-info">Contact Information</p>
   
        {isEditing ? (  
@@ -57,9 +62,7 @@ const MyDashboard = ({ userId,firstName, lastName, address,setAddress, city,setC
         <Form.Control 
             type="file" 
             name= "image" 
-            onChange= {(e)=>{
-              console.log(e.target.files[0])
-              setImage(e.target.files[0])}}
+            onChange= {handleImageChange}
             size="lg" />
       </Form.Group>
       <Form.Group controlId="address" className="mb-3">
