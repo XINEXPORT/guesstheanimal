@@ -17,7 +17,7 @@ const AnimalFacts = () => {
 
     const toggleCard = (e) => {
         setShowDetails(!showDetails);
-        setBackgroundColor(backgroundColor === '#ffc0cb' ? 'pink' : '#ffc0cb');
+        setBackgroundColor(backgroundColor === '#fffff' ? 'pink' : '#ffc0cb');
     };
 
     const favAnimal  = async (e) => {

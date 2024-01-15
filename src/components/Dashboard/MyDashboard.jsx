@@ -2,6 +2,10 @@ import './MyDashboard.css';
 import { useState } from "react";
 import axios from "axios";
 import { Container, Form, Button } from 'react-bootstrap'
+import { FaPencil } from "react-icons/fa6";
+import { BsFillFloppy2Fill } from "react-icons/bs";
+import { MdOutlineCancelPresentation } from "react-icons/md";
+
 
 //create a !isEditing state to return the my-dashboardcard view, else return the editing state
 //create buttons on the dashboard, delete EditContactInfoButtons component
@@ -106,8 +110,8 @@ const MyDashboard = ({ userId,firstName, lastName, address,setAddress, city,setC
           </Form.Group>
           </Form>
 
-          <button onClick={handleSaveClick}>Save</button>
-          <button onClick={handleCancelClick}>Cancel</button>
+          <button className = "save-btn" onClick={handleSaveClick}><BsFillFloppy2Fill /></button>
+          <button className = "cancel-btn" onClick={handleCancelClick}><MdOutlineCancelPresentation /></button>
       </>
   
       ):(
@@ -124,7 +128,7 @@ const MyDashboard = ({ userId,firstName, lastName, address,setAddress, city,setC
           <label htmlFor = "emailaddress" > Email Address: </label>
           <div className = "form">{email}</div>
   
-        <button onClick = {handleEditClick}>Edit</button>
+        <button className = "edit-btn" onClick = {handleEditClick}><FaPencil /></button>
         </div>
       )}
       </div>

@@ -72,78 +72,78 @@ return(
         <main id="forms">
         <section className = "login">
             <h1 className = "title">Login</h1>
-            <label htmlFor = "log-email">Email: </label>
+            <label htmlFor = "log-email">Email </label>
             <input type="text"
                     name = "log-email"
                     placeholder = "enter your email"
                     onChange = {(e)=> setLogEmail(e.target.value)}
             ></input>
 
-            <label htmlFor = "log-password">Password: </label>
+            <label htmlFor = "log-password">Password </label>
             <input type="password"
                     name = "log-password"
                     placeholder = "enter your password"
                     onChange = {(e)=> setLogPassword(e.target.value)}
             ></input>
-            <button
+            <button className = "jelly-button"
             onClick={loginUser}
-            >Login</button>
+            ><span>Login</span></button>
         </section>
 
         <section className = "register">
         <h1 className = "title">Register</h1>
 
-            <label htmlFor = "firstname">First Name: </label>
+            <label htmlFor = "firstname">First Name </label>
             <input type="text"
                     name = "firstname"
                     placeholder = "enter your first name"
                     onChange = {(e)=> setRegFirstName(e.target.value)}
             ></input>
-            <label htmlFor = "lastname">Last Name: </label>
+            <label htmlFor = "lastname">Last Name </label>
             <input type="text"
                     name = "lastname"
                     placeholder = "enter your last name"
                     onChange = {(e)=> setRegLastName(e.target.value)}
             ></input>
-            <label htmlFor = "address">Address: </label>
+            <label htmlFor = "address">Address </label>
             <input type="text"
                     name = "address"
                     placeholder = "enter your address"
                     onChange = {(e)=> setRegAddress(e.target.value)}
             ></input>
-            <label htmlFor = "city">City: </label>
+            <label htmlFor = "city">City </label>
             <input type="text"
                     name = "city"
                     placeholder = "enter your city"
                     onChange = {(e)=> setRegCity(e.target.value)}
             ></input>
-            <label htmlFor = "state">State: </label>
+            <label htmlFor = "state">State </label>
             <input type="text"
                     name = "state"
                     placeholder = "enter your state"
                     onChange = {(e)=> setRegState(e.target.value)}
             ></input>
-            <label htmlFor = "zipcode">Zipcode: </label>
+            <label htmlFor = "zipcode">Zipcode </label>
             <input type="text"
                     name = "zipcode"
                     placeholder = "enter your zipcode"
                     onChange = {(e)=> setRegZipcode(e.target.value)}
             ></input>
-            <label htmlFor = "reg-email">Email: </label>
+            <label htmlFor = "reg-email">Email </label>
             <input type="text"
                     name = "reg-email"
                     placeholder = "enter your email"
                     onChange = {(e)=> setRegEmail(e.target.value)}
             ></input>
-            <label htmlFor = "reg-password">Password: </label>
+            <label htmlFor = "reg-password">Password </label>
             <input type="password"
                     name = "reg-password"
                     placeholder = "enter your password"
                     onChange = {(e)=> setRegPassword(e.target.value)}
             ></input>
-            <button
+            <button className ="jelly-button"
             onClick={registerUser}
-            >Register</button>
+            ><span>Register</span></button>
         </section>
         </main>
     </div>

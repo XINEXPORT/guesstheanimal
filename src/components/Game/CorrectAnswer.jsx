@@ -14,11 +14,11 @@ return(
     <h1 id = "correct">
         Correct!
     </h1>
-        <button id="play-again" onClick={()=>{
+        <button className="jelly-button-green" onClick={()=>{
             setQuiz(newChoices)
             setUserResponse(null)
             setAnswered(false)
-        }}>Play Again</button>
+        }}><span>Play Again</span></button>
     </main>
 )}
 

@@ -1,7 +1,3 @@
-#dashboard{
-    margin: 10%;
-    color: white;
-}
 #mydashboard{
     display: flex;
     align-items:flex-start;

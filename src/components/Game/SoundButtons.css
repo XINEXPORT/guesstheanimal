@@ -1,10 +1,6 @@
 audio::-webkit-media-controls-panel {
     background-color: #FFFD98;
   }
-#select-sound{
-    text-align: center;
-    font-size: x-large;
-}
 .sound-btn{
     padding: 3rem;
   }
@@ -16,6 +12,7 @@ audio::-webkit-media-controls-panel {
   border: none;
   padding: 0;
   cursor: pointer;
+  margin-left: 30px;
 }
 .shadow {
   position: absolute;

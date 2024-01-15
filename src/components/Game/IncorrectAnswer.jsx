@@ -10,12 +10,12 @@ const IncorrectAnswer =({setAnswered, setUserResponse, quiz, setDisplay})=>{
         <main id = "incorrect-answer">
             <div>
             <h1 id = "incorrect-title">Incorrect</h1>
-                <button id="try-again"
+                <button className="jelly-button-green"
                 onClick={()=>{
                     setUserResponse(null)
                     setDisplay(<Quiz q={quiz} setAnswered={setAnswered} setUserResponse={setUserResponse}/>)
                     setAnswered(false)
-                }}>Try Again!</button>
+                }}><span>Try Again!</span></button>
             </div>
         </main>
     )
