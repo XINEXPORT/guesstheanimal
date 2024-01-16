@@ -22,15 +22,24 @@
     width: 300px;
     color: black;
     font-size: x-large;
-    box-shadow: 0 0 0 2px rgba(218,102,123,1), 8px 8px 0 0 rgba(218,102,123,1);
+    box-shadow: 0 0 0 2px rgb(255, 199, 69), 
+                8px 8px 0 0 rgb(248, 143, 52);
+    transition: transform 0.2s
   }
-  .animal-card img.wiggle {
-    height: 250px;
-    width: 250px;
-    margin: auto;
-    display: block;
-    animation: wiggle 2s infinite;
+  /* WIGGLE ON HOVER EFFECT */
+  .animal-card:hover{
+    transform: rotate(5deg);
+    animation: wiggle 1s infinite;
   }
+  @keyframes wiggle {
+    0%, 100% { 
+      transform: rotate(0deg); 
+    }
+    50% {
+      transform: rotate(-5deg);
+    }
+    }
+
   #animal-details {
     display: block;
     font-weight: bold;
@@ -70,10 +79,21 @@
     width: 40px;
     height: 40px;
   }
-  @keyframes wiggle {
-    0% { transform: rotate(0deg); }
-   80% { transform: rotate(0deg); }
-   85% { transform: rotate(5deg); }
-   95% { transform: rotate(-5deg); }
-  100% { transform: rotate(0deg); }
+/* BOUNCE ON HOVER EFFECT */
+/* .child {
+  align-self: flex-center;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  transform-origin: bottom;
 }
+.bounce:hover {
+  animation-name: bounce;
+  animation: bounce 2s infinite;
+}
+@keyframes bounce {
+  0% { transform: rotate(0deg); }
+  80% { transform: rotate(5deg); }
+  85% { transform: rotate(0deg); }
+  95% { transform: rotate(-5deg); }
+ 100% { transform: rotate(0deg); }
+} */

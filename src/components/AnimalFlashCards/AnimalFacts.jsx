@@ -17,7 +17,7 @@ const AnimalFacts = () => {
 
     const toggleCard = (e) => {
         setShowDetails(!showDetails);
-        setBackgroundColor(backgroundColor === '#fffff' ? 'pink' : '#ffc0cb');
+        setBackgroundColor(backgroundColor === '#fffff' ? '#FFC745' : '#FFC745');
     };
 
     const favAnimal  = async (e) => {
@@ -45,7 +45,7 @@ const AnimalFacts = () => {
           //THE LOGGEDIN ? & ISFAVORITED? IS A NESTED TERNARY
           <>
             <h1 className="animal-name">{animalName}</h1>
-            <div><img className = "wiggle" src={animalImg} alt={`Animal ${animalName}`} /></div>
+            <div><img src={animalImg} alt={`Animal ${animalName}`} /></div>
               {loggedIn ? !isFavorited ? (
               <button className="star" onClick={favAnimal}>
                 <FaRegStar id="staropen" className='staropen' />
