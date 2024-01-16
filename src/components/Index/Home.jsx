@@ -20,7 +20,6 @@ const Home = ({}) => {
             <div id = "allanimals">
             {allAnimals}
             </div>
-
             <div className = "footer-container">
             <a href="https://www.linkedin.com/in/christine-hoang-profile/">
             <span className = "linkedin-icon"><FaLinkedin /></span>
