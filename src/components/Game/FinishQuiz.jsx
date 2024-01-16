@@ -20,7 +20,6 @@ const FinishQuiz = () => {
     const copyValues = [...reduxValues]
     const [copyCorrect, copyIncorrect] = copyValues
 
-
     useEffect(() => {
         const updateTotalScore = async () => {
         if(loggedIn) {

@@ -30,6 +30,7 @@ import axios from 'axios';
 
   return (
     <div>
+    <div className = "clouds">
     <header>
       <h1>Welcome to Guess the Animal</h1>
       <nav>
@@ -65,6 +66,7 @@ import axios from 'axios';
         </nav>
       </nav>
     </header>
+    </div>
     </div>
   );
 };
