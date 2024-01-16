@@ -14,20 +14,24 @@ const FinishQuiz = () => {
     const location = useLocation();
     const correct = useSelector(state=>state.correct)
     const incorrect = useSelector(state=>state.incorrect)
+    const loggedIn = useSelector((state) => state.loggedIn);
+
     const reduxValues = [correct, incorrect]
     const copyValues = [...reduxValues]
     const [copyCorrect, copyIncorrect] = copyValues
 
 
-    // useEffect(() => {
-    //     const updateTotalScore = async () => {
-    //         const gameScore = correct*5;
-    //         await axios.put(`/api/user`, {
-    //             totalScore: gameScore,
-    //         });
-    //     }
-    //     updateTotalScore()
-    // },[])
+    useEffect(() => {
+        const updateTotalScore = async () => {
+        if(loggedIn) {
+                const gameScore = correct*5;
+                await axios.put(`/api/user`, {
+                    totalScore: gameScore,
+                });
+            }
+            };
+            updateTotalScore()
+        },[correct, loggedIn])
 
     return(
         <main id="home">
