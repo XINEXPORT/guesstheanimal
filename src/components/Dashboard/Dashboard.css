@@ -4,7 +4,7 @@
     margin-top: 140px;
 }
 #myfavoriteanimals{
-    margin-bottom: 20%;
+    /* margin-bottom: 20%; */
     height: 500px;
 }
 h1{
@@ -36,6 +36,7 @@ label{
     background-color: #F1E3B7;
     padding: 1%;
     padding-bottom: 5%;
+    margin-bottom: auto;
 }
 #myscore{
     color: black;
