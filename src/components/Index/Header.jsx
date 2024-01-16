@@ -2,9 +2,10 @@ import React from 'react';
 import './Header.css';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import LoginPage from '../Login/LoginPage.jsx';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+
 
   // Header Component
   const Header = () => {
@@ -28,6 +29,7 @@ import { useNavigate } from 'react-router-dom';
   };
 
   return (
+    <div>
     <header>
       <h1>Welcome to Guess the Animal</h1>
       <nav>
@@ -58,10 +60,12 @@ import { useNavigate } from 'react-router-dom';
             }} className="jelly-button" style={{color: '#000000' }}>
               <span>Login/Register</span>
               </button>
+
           )}
         </nav>
       </nav>
     </header>
+    </div>
   );
 };
 

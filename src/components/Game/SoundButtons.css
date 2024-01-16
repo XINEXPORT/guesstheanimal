@@ -12,7 +12,7 @@ audio::-webkit-media-controls-panel {
   border: none;
   padding: 0;
   cursor: pointer;
-  margin-left: 40px;
+  margin-left: 45px;
 }
 .shadow {
   position: absolute;

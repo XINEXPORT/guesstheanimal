@@ -1,5 +1,31 @@
- img {
+img {
     margin: 1px 10px 10px;
     margin-bottom: 1px;
+}
+.footer-container{
+    width: 150%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../public/img/grassfooter.png");
+    background-size: 100% 120%;
+    height: 180px;
+    position: fixed;
+    bottom:0;
+}
+.linkedin-icon, .github-icon, .glitch-icon{
+    font-size: 30px;
+    padding-left: 50px;
+    color: rgba(255,255,255,0.9);
+    top: 50px;
+    position: relative;
+}
+.linkedin-icon:hover, .github-icon:hover, .glitch-icon:hover{
+    font-size: 30px;
+    padding-left: 50px;
+    color: rgba(0,0,0,0.4);
+    top: 50px;
+    position: relative;
 }
   
