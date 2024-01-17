@@ -21,13 +21,13 @@ const Home = ({}) => {
             {allAnimals}
             </div>
             <div className = "footer-container">
-            <a href="https://www.linkedin.com/in/christine-hoang-profile/">
+            <a href="https://www.linkedin.com/in/christine-hoang-profile/" target="_blank" rel="noreferrer">
             <span className = "linkedin-icon"><FaLinkedin /></span>
             </a>
-            <a href="https://github.com/XINEXPORT">
+            <a href="https://github.com/XINEXPORT" target="_blank" rel="noreferrer">
             <span className = "github-icon"><FaGithub /></span>
             </a>
-            <a href="https://glitch.com/@XINEXPORT">
+            <a href="https://glitch.com/@XINEXPORT" target="_blank" rel="noreferrer">
             <span className = "glitch-icon"><SiGlitch /></span>
             </a>
         </div>

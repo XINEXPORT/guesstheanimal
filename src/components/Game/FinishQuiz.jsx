@@ -38,11 +38,11 @@ const FinishQuiz = () => {
             <h1 className = "finished">Finished!</h1>
             <main id = "scorecard">
                 <h1 id = "result">Result</h1>
-                <label id ="score">Total Score: </label>
+                <label id ="score">Total Score </label>
                 <div className = "num">{copyCorrect*5}</div>
-                <label id = "correctanswers">Correct Answers:</label>
+                <label id = "correctanswers">Correct Answers</label>
                 <div className = "num">{copyCorrect}</div>
-                <label id = "incorrectanswers">Incorrect Answers:</label>
+                <label id = "incorrectanswers">Incorrect Answers</label>
                 <div className = "num">{copyIncorrect}</div>
             </main>
             <button onClick={()=>{navigate("/animalflashcards")}} className = "jelly-button-green" style={{}}><span>Continue to Animal Flash Cards</span></button>

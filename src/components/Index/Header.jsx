@@ -9,7 +9,6 @@ import axios from 'axios';
 
   // Header Component
   const Header = () => {
-  // Header State
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const loggedIn = useSelector((state) => state.loggedIn);
@@ -32,7 +31,11 @@ import axios from 'axios';
     <div>
     <div>
     <header>
-      <h1>Welcome to Guess the Animal</h1>
+      {loggedIn?(
+        <h1>Guess the Animal</h1>
+      ) : (
+        <h1>Welcome to Guess the Animal</h1>
+      )}
       <nav>
         <Link to="/" id="homelink">
           Home

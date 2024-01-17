@@ -29,10 +29,6 @@ img {
     position: relative;
 }
 .linkedin-icon:hover, .github-icon:hover, .glitch-icon:hover{
-    font-size: 30px;
-    padding-left: 50px;
     color: rgba(0,0,0,0.4);
-    top: 50px;
-    position: relative;
 }
   
