@@ -23,16 +23,16 @@ img {
 }
 .chstudios{
     font-size: 20px;
-    padding-left: 50px;
+    padding-right: 1000px;
     color: rgba(255,255,255,0.9);
-    top: 50px;
+    top: 60px;
     position: relative;
 }
 .linkedin-icon, .github-icon, .glitch-icon,.youtube-icon {
     font-size: 30px;
-    padding-left: 50px;
+    padding-left: 40px;
     color: rgba(255,255,255,0.9);
-    top: 50px;
+    top: 60px;
     position: relative;
 }
 .linkedin-icon:hover, .github-icon:hover, .glitch-icon:hover, .youtube-icon:hover{

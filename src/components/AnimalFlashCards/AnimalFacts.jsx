@@ -12,7 +12,7 @@ const AnimalFacts = () => {
   const AnimalCard = ({ animalName, animalImg, animalDetails, animalId, users }) => {
     let initialFavorite = loggedIn? users.length : false
     const [showDetails, setShowDetails] = useState(true);
-    const [backgroundColor, setBackgroundColor] = useState('#F1E3B7');
+    const [backgroundColor, setBackgroundColor] = useState('#FFFD98');
     const [isFavorited, setIsFavorited] = useState(initialFavorite);
 
     const toggleCard = (e) => {
