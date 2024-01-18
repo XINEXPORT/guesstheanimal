@@ -32,6 +32,10 @@ If a user does not have an account, the star will disappear.
 ## Quiz
 The Game component will display an image of an animal in which the user will listen to the audio samples by clicking the sound buttons. Based on what they heard, they will have to select the correct answer.
 ![MainQuiz](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/acb13185-385b-4a6b-b6bc-25a357e84e3e)
+Correct Answer View
+![Correct Answer](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/5b573219-08ca-4e81-b176-ed5440b2db40)
+Incorrect Answer View
+![Incorrect Answer](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/f9e3e0d1-6bfa-4be4-90b0-a2fe8b419a74)
 
 
 
