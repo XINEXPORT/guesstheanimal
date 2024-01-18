@@ -1,9 +1,9 @@
 #correct{
     padding: 80px;
     text-align: center;
-    font-size: 70px;
-    color: rgb(0, 0, 0);
+    font-size: 80px;
     margin-top: 140px;
+	text-shadow: -1px 1px 0 #000, 0.5px -1px 0 white;
 }
 #play-again{
     margin: 1em;

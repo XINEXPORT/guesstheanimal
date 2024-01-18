@@ -75,3 +75,4 @@ Execute the following command:
 - https://codepen.io/arronhunt/pen/WWOOeO
 - https://www.joshwcomeau.com/animation/3d-button/
 - https://blog.hubspot.com/website/css-hover-animation
+- https://lodash.com/docs/4.17.15#shuffle

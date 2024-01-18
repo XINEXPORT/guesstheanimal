@@ -27,6 +27,7 @@ img {
     color: rgba(255,255,255,0.9);
     top: 60px;
     position: relative;
+    text-shadow: -1px 1px 0 #000;
 }
 .linkedin-icon, .github-icon, .glitch-icon,.youtube-icon {
     font-size: 30px;

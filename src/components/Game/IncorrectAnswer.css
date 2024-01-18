@@ -1,11 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik+Doodle+Shadow');
 #incorrect-answer{
   margin-top: 160px;
 }
 #incorrect-title{
   padding: 80px;
   text-align: center;
-  font-size: 70px;
-  color: rgb(0, 0, 0);
+  font-size: 80px;
+  text-shadow: -1px 1px 0 #000, 0.5px -1px 0 white;
 }
 /* JELLY BUTTON GREEN EFFECT */
 .jelly-button-green {
