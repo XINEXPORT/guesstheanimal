@@ -1,5 +1,5 @@
 # Guess the Animal
-Guess the Animal is an online interactive children’s game platform where a user matches a sound to a corresponding animal image. The web platform has additional interaction components, such as favoriting an animal, playing with flashcards, and a dashboard where a user can view their contact information and see a list of their favorite animals.
+Guess the Animal is an online interactive children’s game platform where a user matches a sound to a corresponding animal image. The web platform has additional interactive components, such as favoriting an animal, playing with flashcards, and a dashboard where a user can view their contact information and see a list of their favorite animals.
 
 ## Landing Page
 ![LandingPage](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/f2ff7cd8-6c8d-48e4-9536-e1dea523a420)
