@@ -4,7 +4,7 @@ Guess the Animal is an online interactive children’s game platform where a use
 ## Landing Page
 ![LandingPage](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/f2ff7cd8-6c8d-48e4-9536-e1dea523a420)
 
-## Login and Register Page
+## Login and Registration Page
 Existing users will be able to login to the site using their email and password credentials <br>
 
 ![LoginPage](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/44eea723-c5d8-4342-945a-892e4117cc98)
@@ -13,7 +13,7 @@ New visitors will be able to register for an account using the Registration form
 ![RegisterPage](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/aa713ec2-0c13-4daa-bfc6-8a18eca6ff3b)
 ![RegisterSubmit](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/295b8e21-222a-4c48-ace3-bad02a4d9eb2)
 
-## Editing Profile Image and Information
+## Editing Profile Image and Contact Information
 The Dashboard will appear in a default state where the user has not favorited any animals and their profile picture will not be populated.
 ![DashboardView - Registration](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/f9101f00-5a58-4f24-9eb7-9cc55ac7bda2)
 
@@ -22,6 +22,12 @@ From the editing view, a user can upload a profile image and change any contact 
 The floppy disc icon will enable the user to save their info. <br>
 ![Edit Profile Info](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/6ce76dbb-d18d-49ba-a83a-68e7273da217)
 ![Saved Profile Image](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/5a2457a9-943c-4ed2-9abd-b94505c53493)
+
+## Flashcards
+Flashcards of animal facts will be available to the user. If the user is logged into their account, they will be able to star their favorite animal from the flashcards view.
+![flashcards-loggedin](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/9620c0b7-9f5d-4e8d-a1e3-72da22d384fa)
+If a user does not have an account, the star will disappear.
+![flashcards-loggedout](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/2c0e14cf-e6b6-41e0-a64d-537f20b5bd15)
 
 
 ---
