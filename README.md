@@ -29,6 +29,11 @@ Flashcards of animal facts will be available to the user. If the user is logged 
 If a user does not have an account, the star will disappear.
 ![flashcards-loggedout](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/2c0e14cf-e6b6-41e0-a64d-537f20b5bd15)
 
+## Quiz
+The Game component will display an image of an animal in which the user will listen to the audio samples by clicking the sound buttons. Based on what they heard, they will have to select the correct answer.
+![MainQuiz](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/acb13185-385b-4a6b-b6bc-25a357e84e3e)
+
+
 
 ---
 # Developer Instructions
