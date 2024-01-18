@@ -11,6 +11,7 @@
      - BackButton
    - FinishQuiz
      - Confetti
+     - Score Display
 - Animal Facts
 - Dashboard
   - MyDashboard
