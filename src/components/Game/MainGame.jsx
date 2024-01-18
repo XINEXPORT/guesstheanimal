@@ -77,7 +77,7 @@ useEffect(()=>{
 },[answered])
 
 useEffect(() => {
-    if(correct+incorrect >= 2){
+    if(correct+incorrect >= 5){
             navigate('/game/finish')
         }
 },[correct,incorrect])
