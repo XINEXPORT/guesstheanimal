@@ -28,14 +28,19 @@ Flashcards of animal facts will be available to the user. If the user is logged 
 ![flashcards-loggedin](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/9620c0b7-9f5d-4e8d-a1e3-72da22d384fa)
 If a user does not have an account, the star will disappear.
 ![flashcards-loggedout](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/2c0e14cf-e6b6-41e0-a64d-537f20b5bd15)
+All of the flashcards have a front and back view. The front view will display an image of the animal with its name. The back of the card will display the animal fact.
+![Flashcards-Back](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/2b5d983e-c888-4ec2-bea6-180e7b1cd3a3)
 
 ## Quiz
 The Game component will display an image of an animal in which the user will listen to the audio samples by clicking the sound buttons. Based on what they heard, they will have to select the correct answer.
 ![MainQuiz](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/acb13185-385b-4a6b-b6bc-25a357e84e3e)
-Correct Answer View
+<ins>Correct Answer View</ins>
 ![Correct Answer](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/5b573219-08ca-4e81-b176-ed5440b2db40)
-Incorrect Answer View
+<ins>Incorrect Answer View</ins>
 ![Incorrect Answer](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/f9e3e0d1-6bfa-4be4-90b0-a2fe8b419a74)
+<ins>Finished View with Score Summary</ins><br>
+The Finished view will render a Score Summary that will display the amount of correct answers and incorrect answers the user selected. The total score is calculated 5 points for every correct answer chosen.
+![FinishedView](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/e81a366e-9069-4b04-b267-648f8b782981)
 
 
 
