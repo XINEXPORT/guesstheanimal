@@ -13,15 +13,23 @@ New visitors will be able to register for an account using the Registration form
 ![RegisterPage](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/aa713ec2-0c13-4daa-bfc6-8a18eca6ff3b)
 ![RegisterSubmit](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/295b8e21-222a-4c48-ace3-bad02a4d9eb2)
 
-## Editing Profile Image and Contact Information
+# My Dashboard View
 The Dashboard will appear in a default state where the user has not favorited any animals and their profile picture will not be populated.
 ![DashboardView - Registration](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/f9101f00-5a58-4f24-9eb7-9cc55ac7bda2)
 
+## Favorite Animals List
+The favorite animals list will display a list of animals that the user has stared from the animal flashcards page
+![FavoriteAnimals List](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/0576e28c-df85-4b61-a301-8409d1b5c6ad)
+
+
+## Editing Profile Image and Contact Information
 A user will be able to edit their profile information by clicking the pencil icon. <br>
 From the editing view, a user can upload a profile image and change any contact information in the editable fields. <br>
 The floppy disc icon will enable the user to save their info. <br>
 ![Edit Profile Info](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/6ce76dbb-d18d-49ba-a83a-68e7273da217)
 ![Saved Profile Image](https://github.com/XINEXPORT/guesstheanimal/assets/40744735/5a2457a9-943c-4ed2-9abd-b94505c53493)
+
+
 
 ## Flashcards
 Flashcards of animal facts will be available to the user. If the user is logged into their account, they will be able to star their favorite animal from the flashcards view.
