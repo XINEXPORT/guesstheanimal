@@ -21,8 +21,8 @@ const Home = ({}) => {
             {allAnimals}
             </div>
             <div className = "footer-container">
-            <div className = "chstudios">2024 Christine Hoang Studios. All Rights Reserved. </div>
-            <a href="https://www.linkedin.com/in/christine-hoang-profile/" target="_blank" rel="noreferrer">
+            {/* <div className = "chstudios">2024 Christine Hoang Studios. All Rights Reserved. </div> */}
+            {/* <a href="https://www.linkedin.com/in/christine-hoang-profile/" target="_blank" rel="noreferrer">
             <span className = "linkedin-icon"><FaLinkedin /></span>
             </a>
             <a href="https://github.com/XINEXPORT" target="_blank" rel="noreferrer">
@@ -33,7 +33,7 @@ const Home = ({}) => {
             </a>
             <a href="https://www.youtube.com/@planetxine" target="_blank" rel="noreferrer">
             <span className = "youtube-icon"><FaYoutube /></span>
-            </a>
+            </a> */}
         </div>
         </main>
     )
